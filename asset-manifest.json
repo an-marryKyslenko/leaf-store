@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/an-marryKyslenko/leaf-store/static/css/main.23046c3d.css",
+    "main.js": "/an-marryKyslenko/leaf-store/static/js/main.c0e8be35.js",
+    "index.html": "/an-marryKyslenko/leaf-store/index.html",
+    "main.23046c3d.css.map": "/an-marryKyslenko/leaf-store/static/css/main.23046c3d.css.map",
+    "main.c0e8be35.js.map": "/an-marryKyslenko/leaf-store/static/js/main.c0e8be35.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.23046c3d.css",
+    "static/js/main.c0e8be35.js"
+  ]
+}
