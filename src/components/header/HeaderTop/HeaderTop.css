@@ -1,0 +1,40 @@
+.header__top{
+	padding: 15px 0;
+	background-color:#1E6140;
+}
+.header__container{
+	display: flex;
+	justify-content: space-between;
+}
+.header__menu{
+	display: flex;
+	gap: 30px;
+}
+.header__link.active{
+	border-bottom: 1px solid;
+	padding-bottom: 2px;
+}
+.header__enter{
+	display: flex;
+	align-items: center;
+	gap: 30px;
+}
+.header__enter-link span{
+	color: #84BE51;
+	display: inline-block;
+	margin-right: 5px;
+	position: relative;
+	top: 2px;
+
+}
+.header__enter-link{
+	position: relative;
+}
+.header__enter-link:first-child:after{
+	content: '';
+	position: absolute;
+	height: 100%;
+	width: 1px;
+	right: -15px;
+	background-color: white;
+}

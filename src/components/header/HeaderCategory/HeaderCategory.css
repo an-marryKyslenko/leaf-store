@@ -1,0 +1,17 @@
+.category{
+	display: flex;
+	justify-content: space-between;
+}
+.category__btn{
+	border: 1px solid #1E6140;
+	border-radius: 20px;
+	width: 202px;
+	padding: 10px 0;
+	color: #000;
+	font-weight: 600;
+	font-size: 14px;
+	line-height: 105.9%;
+	display: flex;
+	justify-content: center;
+	text-transform: uppercase;
+}
