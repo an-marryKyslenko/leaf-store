@@ -4,10 +4,13 @@
 	border-radius: 90px;
 	padding: 10px 7px 10px 20px;
 	overflow: hidden;
+	display: flex;
 }
 .search__input{
 	border-right: 1px solid rgba(0, 0, 0, 0.2);
 	font-size: 16px;
+	flex: 0 1 80%;
+	min-width: 150px;
 }
 .search__input::placeholder{
 	color: #484848;
@@ -15,4 +18,11 @@
 .search__btn{
 	padding: 3px 15px 0;
 	color: #84BE51;
+	flex: 0 1 20%;
+}
+
+@media (max-width: 850px){
+	.search{
+		display: none;
+	}
 }

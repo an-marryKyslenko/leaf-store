@@ -1,0 +1,92 @@
+.burger-menu{
+	position: fixed;
+	width: 45%;
+	height: 100vh;
+	background-color: #1E6140;
+	top: 50px;
+	right: -100%;
+	z-index: 20;
+	padding:15px;
+	transition: 0.4s ease-in;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: start;
+	justify-content: space-between;
+	overflow-y: scroll;
+}
+.burger-menu.open{
+	right: 0;
+}
+.burger-menu .logo__top{
+	color: #fff;
+
+}
+.burger-menu.open .header__buttons{
+	flex: 0 1 50%;
+}
+.burger-menu.open .roll-btn{
+	color: #fff;
+	border-color: #fff;
+
+}
+.burger-menu.open .roll-btn:hover{
+	border-color: #84BE51;
+	background-color: #84BE51;
+}
+.burger-menu.open .search{
+	display: flex;
+	flex: 0 1 100%;
+
+}
+.burger-menu.open .phones{
+	display: block;
+	flex: 0 1 100%;
+	z-index: 22;
+}
+.burger-menu.open .phones__drob-down{
+	padding: 10px 15px;
+	transition: all 0.3s ease 0s;
+}
+.burger-menu.open .phones__drob-down.active{
+	color:#fff;
+position: relative;
+background-color: transparent;
+}
+
+.burger-menu.open .phones__drob-down.active .roll-btn{
+	border-color: #84BE51;
+	color: #84BE51;
+}
+.burger-menu.open .phones__drob-down.active .roll-btn:hover{
+	color: #fff;
+}
+
+
+/* burger menu list */
+
+.burger-menu__menu{
+	display: flex;
+	flex: 0 1 100%;
+	padding: 30px 0;
+	border-top: 1px solid rgba(255, 255, 255, 0.114);
+	justify-content: center;
+}
+.burger-menu__list{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 15px 0;
+}
+.burger-menu__link{
+	font-weight: 300;
+	font-size: 22px;
+	line-height: 50px;
+}
+.burger-menu__link.active{
+	border-bottom: 1px solid;
+}
+@media (max-width: 660px){
+	.burger-menu{
+		width: 100%;
+	}
+}

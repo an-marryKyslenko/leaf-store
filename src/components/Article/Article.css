@@ -1,0 +1,30 @@
+/* article */
+
+.article{
+	background:linear-gradient(80.25deg, rgba(132, 190, 81, 0.4) 1.38%, rgba(132, 190, 81, 0) 62.36%), linear-gradient(262.1deg, rgba(232, 78, 15, 0.3) 3.67%, rgba(232, 78, 15, 0) 87.59%), linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../../assets/images/home-section-fon.jfif') center bottom /cover no-repeat;
+	padding: 100px 0;
+}
+.article p{
+	color: #fff;
+	margin-bottom: 15px;
+	font-size: 16px;
+line-height: 20px;
+}
+
+.article__title.title{
+	justify-content: start;
+	color: #fff;
+}
+.article .show-text-btn{
+	color: #fff;
+	display: flex;
+	gap: 10px;
+}
+@media (max-width: 768px){
+	.article{
+		padding: 40px;
+	}
+	.article p{
+		opacity: 0.6;
+	}
+}

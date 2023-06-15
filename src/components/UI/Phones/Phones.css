@@ -1,17 +1,18 @@
 .phones {
 	position: relative;
-	z-index: 1;
 	align-items: center;
 	justify-content: center;
-	width: 280px;
+
 }
 .phones__drob-down{
 	display: flex;
 	gap: 10px;
 	align-items: center;
 	position: relative;
+	flex-wrap: nowrap;
 }
 .phones__drob-down.active{
+	z-index: 1;
 	position: absolute;
 	align-items: start;
 	z-index: 9;
@@ -20,12 +21,14 @@
 	background-color: #fff;
 	box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.15);
 	border-radius: 20px;
-	width: 280px;
 	top: 0;
 }
 .phones__list{
 	display: flex;
 	flex-direction: column;
+}
+.phones__list a{
+	white-space: nowrap;
 }
 .phones__icon{
 	cursor: pointer;
@@ -45,4 +48,10 @@
 }
 .phones__hover-list{
 	margin-top: 10px;
+}
+
+@media (max-width: 850px){
+	.phones{
+		display: none;
+	}
 }
