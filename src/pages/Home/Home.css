@@ -2,8 +2,6 @@
 	margin: 100px 0;
 }
 
-
-
 .fullscreen{
 	position: relative;
 	height: 100vh;
@@ -140,7 +138,11 @@
 		margin: 0 0 40px;
 	}
 }
-
+@media (max-height: 500px) {
+	.fullscreen{
+		min-height: 100vh;
+	}
+}
 
 /*  about section */
 
@@ -203,6 +205,7 @@
 	}
 	.home__section{
 		margin: 40px 0;
+		
 	}
 }
 
@@ -306,7 +309,6 @@ transform: matrix(-1, 0, 0, 1, 0, 0);
 	font-size: 45px;
 	line-height: 55px;
 	margin-bottom: 25px;
-	z-index: 5;
 	display: flex;
 	gap: 10px;
 	justify-content: center;

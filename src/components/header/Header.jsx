@@ -1,5 +1,5 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React, { useState, useEffect } from 'react'
+import { Link, useLocation } from 'react-router-dom'
 
 import { FaLeaf } from 'react-icons/fa'
 import { CiSearch } from 'react-icons/ci'
@@ -16,7 +16,15 @@ import Phones from '../UI/Phones/Phones'
 import BurgerMenu from '../burgerMenu/BurgerMenu'
 
 const Header = () => {
-  const {isHome} = useGlobalContaxt()
+  const [isHome, setIsHome] = useState(false)
+  const { pathname } = useLocation()
+
+  useEffect(() => {
+    if (pathname === '/') {
+      return setIsHome(true)
+    }
+    return setIsHome(false)
+  }, [pathname])
   return (
     <header className={isHome ? 'header absolute' : 'header'}>
       <HeaderTop />

@@ -7,7 +7,6 @@ const ProviderContaxt = ({ children }) => {
 	const [openBurger, setOpenBurger] = useState(false)
 	const [category, setCategory] = useState('Seed')
 	const [windowWidth, setWindowWidth] = useState(window.innerWidth)
-	const [isHome,setIsHome] = useState(false)
 
 	useEffect(() => {
 		function watch() {
@@ -25,7 +24,6 @@ const ProviderContaxt = ({ children }) => {
 			category,
 			setCategory,
 			windowWidth,
-			isHome,
 		}}>
 			{children}
 		</MyContaxt.Provider>

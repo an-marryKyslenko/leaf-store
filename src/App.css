@@ -69,11 +69,12 @@ body{
   display: flex;
   flex-direction: column;
   background-color: rgb(242, 242, 242);
+  overflow: hidden;
 }
 
 .container{
 	margin: 0 auto;
-  max-width: 1140px;
+  max-width: 1410px;
   padding: 0 15px;
 }
 .main{

@@ -1,0 +1,95 @@
+.swiper-section{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.swiper-container{
+	max-width: 100%;
+	position: relative;
+	display: flex;
+	align-items: center;
+	gap: 20px;
+	min-width: 0;
+	padding:0 20px ;
+}
+.swiper{
+	max-width: 90vw;
+	min-width: 0;
+}
+.swiper-slide{
+	max-width: 255px;
+}
+.swiper__next,
+.swiper__prev{
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	border: 1px solid #84C551;
+	color: #84C551;
+	font-size: 20px;
+	transition: all 0.5s ease 0s;
+	background-color: transparent;
+	transform: translateY(-50%);
+	display: none;
+}
+.swiper__next:hover,
+.swiper__prev:hover{
+	background-color: #84C551;
+	color: #fff;
+}
+
+.swiper__pagination{
+	display: flex;
+	justify-content: center;
+	height: 30px;
+	margin: 50px 0 0;
+	align-items: end;
+	z-index: 5;
+	transform: translateX(0) !important;
+}
+
+.swiper-pagination-bullet{
+	width: 6px;
+	height: 16px;
+	background-color: rgba(141, 50, 0, 0.4);
+	border-radius: 20px;
+	opacity: 1;
+}
+.sales-section-pagination .swiper-pagination-bullet{
+	background-color: rgba(255, 255, 255, 0.4);
+}
+.sales-section-pagination .swiper-pagination-bullet-active{
+	background-color: #ffffff;
+}
+.swiper-pagination-bullet-active{
+	background-color: #8D3200;
+	height: 30px;
+}
+.swiper-container .orange-btn{
+	flex: 0 1 100%;
+	align-self: center;
+}
+
+
+ @media screen and (min-width: 920px) {
+	.swiper {
+	  max-width: 700px;
+	}
+	.swiper__prev,
+	.swiper__next{
+		display: block;
+	}
+ }
+ @media screen and (min-width: 1100px) {
+	.swiper {
+	  max-width: 910px;
+	}
+ }
+ @media screen and (min-width: 1260px) {
+	.swiper {
+	  max-width: 1100px;
+	}
+	
+ }

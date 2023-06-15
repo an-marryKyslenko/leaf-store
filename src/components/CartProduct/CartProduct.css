@@ -1,9 +1,8 @@
 .cart {
 	flex: 0 1 255px;
-
-
 }
 .cart__container {
+	height: 330px;
 	background: #FFFFFF;
 	border-radius: 20px;
 	display: flex;
@@ -28,12 +27,13 @@
 	flex-wrap: wrap;
 	align-items: center;
 	justify-content: space-between;
+	flex: 0 1 50%;
 }
 .cart__title {
 	font-weight: 600;
 	font-size: 16px;
 	line-height: 20px;
-	flex: 0 1 100%;
+	flex: 1 1 auto;
 }
 .cart__in-stock {
 	font-size: 14px;

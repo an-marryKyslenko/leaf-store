@@ -28,7 +28,6 @@ const HeaderCategory = () => {
 			setIsOpen(false)
 		}
 	}
-	console.log(windowWidth);
 	return (
 		<div className="header__category category">
 			{windowWidth <= 820
