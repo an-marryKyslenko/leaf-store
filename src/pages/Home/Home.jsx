@@ -2,8 +2,6 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import './Home.css'
 
-
-
 import { FaLeaf } from 'react-icons/fa'
 
 import { partners, products } from '../../data'
@@ -14,9 +12,8 @@ import { useGlobalContaxt } from '../../context'
 
 import { text } from '../../data'
 import Article from '../../components/Article/Article'
-import CartProduct from '../../components/CartProduct/CartProduct'
 import SectionSwiper from '../../components/UI/SectionSwiper/SectionSwiper'
-
+import Title from '../../components/UI/Title/Title'
 
 const Home = () => {
   const { windowWidth } = useGlobalContaxt()
@@ -45,7 +42,7 @@ const Home = () => {
             <img src={aboutPhone} alt="about" />
           </div>
           <div className="about-home__content">
-            <h2 className="about-home__title title"><FaLeaf className='leaf' /> About us</h2>
+            <Title title="About us" clases="about-home" secondLeaf={false} />
             <p><span>DAMAR AGROTRADE LLC</span> is a young team that appeared on the agricultural market in 2020. We are not afraid of difficulties and challenges. Therefore, even the difficult covid period and the global pandemic did not stand in the way of a successful start.</p>
             <p>So, <span>we are brave, we are driven</span> , we are the ones who develop crop production and help thousands of domestic farmers to become successful.</p>
             <p><span>Vision:</span> the company "DAMAR AGROTRADE" LLC is on a course to increase the prestige and trust of plant protection products made in UA. We want our customers to have access to quality products and consulting from team specialists in every region of Ukraine.</p>
@@ -58,7 +55,7 @@ const Home = () => {
       </div>
       <SectionSwiper classes="home-sales" title="Sales" data={products} totalSlides={12} buttons paginationClass="sales-section-pagination" />
       <SectionSwiper classes="home-partners" title="Partners" data={partners} totalSlides={6} paginationClass="partners-section-pagination" />
-      <Article text={text} />
+      <Article text={text} title="Seeds" />
     </main>
   )
 }

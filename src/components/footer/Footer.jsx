@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom'
 
 import { FaLeaf } from 'react-icons/fa'
 import { CiMail } from 'react-icons/ci'
+import { BsArrowUp } from 'react-icons/bs'
+
 import Phones from '../../components/UI/Phones/Phones'
 
 import './Footer.css'
@@ -47,6 +49,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="footer__copy">© 2022 DAT</div>
+        <a href="#header" className='footer__link-to-top'><BsArrowUp/></a>
       </div>
     </footer>
   )

@@ -103,6 +103,31 @@ body{
 	filter: blur(7rem);
 	z-index: 1;
 }
+.main__paths{
+	display: flex;
+	justify-content: center;
+	gap: 30px;
+	margin-bottom: 10px;
+}
+.main__path{
+	color: rgba(0, 0, 0, 0.5);
+	position: relative;
+}
+.main__path:not(:last-child)::after{
+	position: absolute;
+	content: '';
+	width: 6px;
+	height: 6px;
+	top: 40%;
+	right: -19px;
+	border-radius: 50%;
+	background-color:  #84C551;
+}
+.main__path:last-child{
+	font-weight: 700;
+}
+
+/* logo */
 
 .logo{
 	display: flex;
@@ -122,6 +147,9 @@ body{
 .logo__icon{
 	color:#84C551;
 }
+
+
+
 @media (max-width:768px){
 	.logo__top{
 		font-size: 32px;

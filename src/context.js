@@ -1,13 +1,15 @@
 import React from "react";
 import { useContext, useState, useEffect,createContext } from "react";
 import { useSearchParams } from "react-router-dom";
+
+import {products} from './data'
+
 const MyContaxt = createContext()
 
 const ProviderContaxt = ({ children }) => {
 	const [openBurger, setOpenBurger] = useState(false)
 	const [category, setCategory] = useState('Seed')
 	const [windowWidth, setWindowWidth] = useState(window.innerWidth)
-
 	useEffect(() => {
 		function watch() {
 			setWindowWidth(window.innerWidth)
@@ -24,6 +26,7 @@ const ProviderContaxt = ({ children }) => {
 			category,
 			setCategory,
 			windowWidth,
+			products
 		}}>
 			{children}
 		</MyContaxt.Provider>

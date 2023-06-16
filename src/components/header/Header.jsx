@@ -26,7 +26,7 @@ const Header = () => {
     return setIsHome(false)
   }, [pathname])
   return (
-    <header className={isHome ? 'header absolute' : 'header'}>
+    <header id='header' className={isHome ? 'header absolute' : 'header'}>
       <HeaderTop />
       <div className='container'>
         <div className="header__middle">

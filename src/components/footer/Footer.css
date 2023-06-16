@@ -1,5 +1,6 @@
 .footer {
 	background-color: #fff;
+	overflow: hidden;
 }
 .footer__content {
 	display: flex;
@@ -27,8 +28,7 @@ margin-bottom: 20px;
 	flex-direction: column;
 	gap: 15px;
 }
-.footer__link {
-}
+
 .footer__mail {
 	margin-top: 20px;
 	display: flex;
@@ -51,8 +51,25 @@ margin-bottom: 20px;
 .footer .phones{
 	display: block;
 }
-
-
+.footer .container{
+	position: relative;
+}
+.footer__link-to-top{
+	position: absolute;
+	background: #84C551;
+	border-radius: 30px;
+	padding: 30px 20px ;
+	bottom: -20%;
+	right:15%;
+	height: 188px;
+	color: #fff;
+	font-size: 20px;
+	animation: wobble-ver-left 1.5s 1s both;
+	transition: all 0.3s ease 0s;
+}
+.footer__link-to-top:hover{
+	bottom: -24%;
+}
 /* madia query */
 
 @media (max-width: 768px){
@@ -69,5 +86,29 @@ margin-bottom: 20px;
 	.footer__column:first-child,
 	.footer__column:last-child{
 		flex: 0 1 100%;
+	}
+}
+
+
+@keyframes wobble-ver-left {
+	0%,
+	100% {
+	transform: translateY(0) rotate(0);
+	transform-origin: 50% 50%;
+	}
+	15% {
+	transform: translateY(-30px) rotate(-6deg);
+	}
+	30% {
+	transform: translateY(15px) rotate(6deg);
+	}
+	45% {
+	transform: translateY(-15px) rotate(-3.6deg);
+	}
+	60% {
+	transform: translateY(9px) rotate(2.4deg);
+	}
+	75% {
+	transform: translateY(-6px) rotate(-1.2deg);
 	}
 }

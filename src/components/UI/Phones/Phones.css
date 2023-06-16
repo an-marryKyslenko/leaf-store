@@ -2,7 +2,8 @@
 	position: relative;
 	align-items: center;
 	justify-content: center;
-
+	min-width: 250px;
+	min-height: 50px;
 }
 .phones__drob-down{
 	display: flex;

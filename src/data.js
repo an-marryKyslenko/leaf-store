@@ -17,9 +17,9 @@ export const products = [
 		photo: photo2,
 		total: 1,
 		price: 12,
-		type: ["Herbicides", "Insecticides"],
+		type: "Herbicides",
 		production: "Skop",
-		category: "PLANTS PROTECTING TOOLS",
+		category: "plants protecting tools",
 		calture: ["Sunflower", "Corn", "Wheat", "Barley", "Turnip",]
 		
 	},
@@ -28,9 +28,9 @@ export const products = [
 		photo: photo2,
 		total: 1,
 		price: 12,
-		type: ["Herbicides", "Insecticides"],
+		type: "Insecticides",
 		production: "Skop",
-		category: "PLANTS PROTECTING TOOLS",
+		category: "plants protecting tools",
 		calture: ["Sunflower", "Corn", "Wheat", "Barley", "Turnip",]
 		
 	},
@@ -39,9 +39,9 @@ export const products = [
 		photo: photo2,
 		total: 1,
 		price: 12,
-		type: ["Herbicides", "Insecticides"],
+		type: "Insecticides",
 		production: "Skop",
-		category: "PLANTS PROTECTING TOOLS",
+		category: "plants protecting tools",
 		calture: ["Sunflower", "Corn", "Wheat", "Barley", "Turnip",]
 		
 	},
@@ -50,9 +50,9 @@ export const products = [
 		photo: photo2,
 		total: 1,
 		price: 12,
-		type: ["Herbicides", "Insecticides"],
+		type: "Herbicides",
 		production: "Skop",
-		category: "PLANTS PROTECTING TOOLS",
+		category: "plants protecting tools",
 		calture: ["Sunflower", "Corn", "Wheat", "Barley", "Turnip",]
 		
 	},
@@ -61,9 +61,9 @@ export const products = [
 		photo: photo4,
 		total: 1,
 		price: 12,
-		type: ["Herbicides", "Insecticides"],
+		type: "Herbicides",
 		production: "Skop",
-		category: "PLANTS PROTECTING TOOLS",
+		category: "plants protecting tools",
 		calture: ["Sunflower", "Corn", "Wheat", "Barley", "Turnip",]
 		
 	},
@@ -72,7 +72,7 @@ export const products = [
 		photo: photo1,
 		total: 2,
 		price: 14,
-		type: ["Flowers"],
+		type: "Flowers",
 		production: "Ukraine",
 		category: "seeds",
 		sort: ["Sunflower", "Corn"]
@@ -83,7 +83,7 @@ export const products = [
 		photo: photo4,
 		total: 2,
 		price: 14,
-		type: ["Flowers"],
+		type: "Flowers",
 		production: "Ukraine",
 		category: "seeds",
 		sort: ["Sunflower", "Corn"]
@@ -94,7 +94,194 @@ export const products = [
 		photo: photo1,
 		total: 3,
 		price: 12,
-		type: ["Flowers"],
+		type: "Vegitablse",
+		production: "Poland",
+		category: "seeds",
+		sort: ["Corn"]
+		
+	},
+	{
+		name: "Скор 250 ЕС к.э.",
+		photo: photo2,
+		total: 1,
+		price: 12,
+		type: "Herbicides",
+		production: "Skop",
+		category: "plants protecting tools",
+		calture: ["Sunflower", "Corn", "Wheat", "Barley", "Turnip",]
+		
+	},
+	{
+		name: "Скор 250 ЕС к.э.",
+		photo: photo2,
+		total: 1,
+		price: 12,
+		type: "Insecticides",
+		production: "Skop",
+		category: "plants protecting tools",
+		calture: ["Sunflower", "Corn", "Wheat", "Barley", "Turnip",]
+		
+	},
+	{
+		name: "Скор 250 ЕС к.э.",
+		photo: photo2,
+		total: 1,
+		price: 12,
+		type: "Insecticides",
+		production: "Skop",
+		category: "plants protecting tools",
+		calture: ["Sunflower", "Corn", "Wheat", "Barley", "Turnip",]
+		
+	},
+	{
+		name: "Скор 250 ЕС к.э.",
+		photo: photo2,
+		total: 1,
+		price: 12,
+		type: "Herbicides",
+		production: "Skop",
+		category: "plants protecting tools",
+		calture: ["Sunflower", "Corn", "Wheat", "Barley", "Turnip",]
+		
+	},
+	{
+		name: "Скор 250 ЕС к.э.",
+		photo: photo4,
+		total: 1,
+		price: 12,
+		type: "Herbicides",
+		production: "Skop",
+		category: "plants protecting tools",
+		calture: ["Sunflower", "Corn", "Wheat", "Barley", "Turnip",]
+		
+	},
+	{
+		name: "Петунія Софістика F1",
+		photo: photo1,
+		total: 2,
+		price: 14,
+		type: "Flowers",
+		production: "Ukraine",
+		category: "seeds",
+		sort: ["Sunflower", "Corn"]
+		
+	},
+	{
+		name: "Петунія Софістика F1",
+		photo: photo4,
+		total: 2,
+		price: 14,
+		type: "Flowers",
+		production: "Ukraine",
+		category: "fertilizers",
+		sort: ["Sunflower", "Corn"]
+		
+	},
+	{
+		name: "Петунія Софістика",
+		photo: photo1,
+		total: 3,
+		price: 12,
+		type: "Vegitablse",
+		production: "Poland",
+		category: "feed group",
+		sort: ["Corn"]
+		
+	},
+	{
+		name: "Петунія Софістика",
+		photo: photo1,
+		total: 3,
+		price: 12,
+		type: "Flowers",
+		production: "Poland",
+		category: "help the agronomist",
+		sort: ["Corn"]
+		
+	},
+	{
+		name: "Петунія Софістика",
+		photo: photo3,
+		total: 3,
+		price: 12,
+		type: "Fruits",
+		production: "Poland",
+		category: "plants protecting tools",
+		sort: ["Corn"]
+		
+	},
+	{
+		name: "Петунія Софістика",
+		photo: photo4,
+		total: 3,
+		price: 10,
+		type: "Fruits",
+		production: "Poland",
+		category: "fertilizers",
+		sort: ["Corn"]
+		
+	},
+	{
+		name: "Петунія Софістика",
+		photo: photo3,
+		total: 3,
+		price: 12,
+		type: "Vegitablse",
+		production: "Poland",
+		category: "seeds",
+		sort: ["Corn"]
+		
+	},
+	{
+		name: "Петунія Софістика",
+		photo: photo3,
+		total: 3,
+		price: 10,
+		type: "Tree",
+		production: "Poland",
+		category: "help the agronomist",
+		sort: ["Corn"]
+		
+	},
+	{
+		name: "Скор 250 ЕС к.э.",
+		photo: photo4,
+		total: 1,
+		price: 12,
+		type: "Herbicides",
+		production: "Skop",
+		category: "plants protecting tools",
+		calture: ["Sunflower", "Corn", "Wheat", "Barley", "Turnip",]
+		
+	},
+	{
+		name: "Петунія Софістика F1",
+		photo: photo1,
+		total: 2,
+		price: 14,
+		type: "Flowers",
+		production: "Ukraine",
+		category: "feed group",
+		sort: ["Sunflower", "Corn"]
+		
+	},
+	{
+		name: "Петунія Софістика F1",
+		photo: photo4,
+		total: 2,
+		price: 14,
+		type: "Flowers",
+		production: "Ukraine",
+		category: "seeds",
+		sort: ["Sunflower", "Corn"]
+		
+	},
+	{
+		name: "Петунія Софістика",
+		photo: photo1,
+		total: 3,
+		price: 12,
+		type: "Vegitablse",
 		production: "Poland",
 		category: "seeds",
 		sort: ["Corn"]
@@ -105,9 +292,9 @@ export const products = [
 		photo: photo1,
 		total: 3,
 		price: 12,
-		type: ["Flowers"],
+		type: "Flowers",
 		production: "Poland",
-		category: "seeds",
+		category: "help the agronomist",
 		sort: ["Corn"]
 		
 	},
@@ -116,9 +303,9 @@ export const products = [
 		photo: photo3,
 		total: 3,
 		price: 12,
-		type: ["Flowers"],
+		type: "Tree",
 		production: "Poland",
-		category: "seeds",
+		category: "feed group",
 		sort: ["Corn"]
 		
 	},
@@ -127,9 +314,9 @@ export const products = [
 		photo: photo4,
 		total: 3,
 		price: 10,
-		type: ["Flowers"],
+		type: "Fruits",
 		production: "Poland",
-		category: "seeds",
+		category: "fertilizers",
 		sort: ["Corn"]
 		
 	},
@@ -138,7 +325,7 @@ export const products = [
 		photo: photo3,
 		total: 3,
 		price: 12,
-		type: ["Flowers"],
+		type: "Vegitablse",
 		production: "Poland",
 		category: "seeds",
 		sort: ["Corn"]
@@ -149,7 +336,7 @@ export const products = [
 		photo: photo3,
 		total: 3,
 		price: 10,
-		type: ["Flowers"],
+		type: "Vegitablse",
 		production: "Poland",
 		category: "seeds",
 		sort: ["Corn"]

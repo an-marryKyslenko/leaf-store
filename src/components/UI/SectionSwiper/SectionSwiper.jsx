@@ -15,11 +15,12 @@ import { BsArrowLeft, BsArrowRight } from 'react-icons/bs'
 import CartProduct from '../../CartProduct/CartProduct';
 
 import { products } from '../../../data'
+import Title from '../Title/Title';
 
 const SectionSwiper = ({ data, classes, title, totalSlides, buttons, paginationClass }) => {
 	return (
 		<section className={`home__section swiper-section ${classes}`}>
-			<h2 className={`${classes}__title title`} title><FaLeaf className='leaf' />{title}<FaLeaf className='leaf second' /></h2>
+			<Title clases={classes} title={title} secondLeaf/>
 			<div className="swiper-container">
 				<button className='swiper__prev'><BsArrowLeft /></button>
 				<Swiper
