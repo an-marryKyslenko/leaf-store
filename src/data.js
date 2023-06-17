@@ -18,9 +18,9 @@ export const products = [
 		total: 1,
 		price: 12,
 		type: "Herbicides",
-		production: "Skop",
+		production: "Armada",
 		category: "plants protecting tools",
-		calture: ["Sunflower", "Corn", "Wheat", "Barley", "Turnip",]
+		culture: ["Sunflower", "Corn", "Wheat", "Barley", "Turnip",]
 		
 	},
 	{
@@ -31,7 +31,7 @@ export const products = [
 		type: "Insecticides",
 		production: "Skop",
 		category: "plants protecting tools",
-		calture: ["Sunflower", "Corn", "Wheat", "Barley", "Turnip",]
+		culture: ["Sunflower", "Corn", "Wheat", "Barley", "Turnip",]
 		
 	},
 	{
@@ -42,7 +42,7 @@ export const products = [
 		type: "Insecticides",
 		production: "Skop",
 		category: "plants protecting tools",
-		calture: ["Sunflower", "Corn", "Wheat", "Barley", "Turnip",]
+		culture: ["Sunflower", "Corn", "Wheat", "Barley", "Turnip",]
 		
 	},
 	{
@@ -53,7 +53,7 @@ export const products = [
 		type: "Herbicides",
 		production: "Skop",
 		category: "plants protecting tools",
-		calture: ["Sunflower", "Corn", "Wheat", "Barley", "Turnip",]
+		culture: ["Sunflower", "Corn", "Wheat", "Barley", "Turnip",]
 		
 	},
 	{
@@ -62,9 +62,9 @@ export const products = [
 		total: 1,
 		price: 12,
 		type: "Herbicides",
-		production: "Skop",
+		production: "Armada",
 		category: "plants protecting tools",
-		calture: ["Sunflower", "Corn", "Wheat", "Barley", "Turnip",]
+		culture: ["Sunflower", "Corn", "Wheat", "Barley", "Turnip",]
 		
 	},
 	{
@@ -75,7 +75,7 @@ export const products = [
 		type: "Flowers",
 		production: "Ukraine",
 		category: "seeds",
-		sort: ["Sunflower", "Corn"]
+		culture: ["Sunflower", "Corn"]
 		
 	},
 	{
@@ -86,7 +86,7 @@ export const products = [
 		type: "Flowers",
 		production: "Ukraine",
 		category: "seeds",
-		sort: ["Sunflower", "Corn"]
+		culture: ["Sunflower", "Corn"]
 		
 	},
 	{
@@ -97,7 +97,7 @@ export const products = [
 		type: "Vegitablse",
 		production: "Poland",
 		category: "seeds",
-		sort: ["Corn"]
+		culture: ["Corn","Wheat"]
 		
 	},
 	{
@@ -108,7 +108,7 @@ export const products = [
 		type: "Herbicides",
 		production: "Skop",
 		category: "plants protecting tools",
-		calture: ["Sunflower", "Corn", "Wheat", "Barley", "Turnip",]
+		culture: ["Sunflower", "Corn", "Wheat", "Barley", "Turnip",]
 		
 	},
 	{
@@ -119,7 +119,7 @@ export const products = [
 		type: "Insecticides",
 		production: "Skop",
 		category: "plants protecting tools",
-		calture: ["Sunflower", "Corn", "Wheat", "Barley", "Turnip",]
+		culture: ["Sunflower", "Corn", "Wheat", "Barley", "Turnip",]
 		
 	},
 	{
@@ -128,9 +128,9 @@ export const products = [
 		total: 1,
 		price: 12,
 		type: "Insecticides",
-		production: "Skop",
+		production: "Armada",
 		category: "plants protecting tools",
-		calture: ["Sunflower", "Corn", "Wheat", "Barley", "Turnip",]
+		culture: ["Sunflower", "Corn","Turnip",]
 		
 	},
 	{
@@ -141,7 +141,7 @@ export const products = [
 		type: "Herbicides",
 		production: "Skop",
 		category: "plants protecting tools",
-		calture: ["Sunflower", "Corn", "Wheat", "Barley", "Turnip",]
+		culture: ["Sunflower", "Corn", "Wheat", "Barley", "Turnip",]
 		
 	},
 	{
@@ -152,7 +152,7 @@ export const products = [
 		type: "Herbicides",
 		production: "Skop",
 		category: "plants protecting tools",
-		calture: ["Sunflower", "Corn", "Wheat", "Barley", "Turnip",]
+		culture: [ "Wheat", "Barley", "Turnip",]
 		
 	},
 	{
@@ -163,7 +163,7 @@ export const products = [
 		type: "Flowers",
 		production: "Ukraine",
 		category: "seeds",
-		sort: ["Sunflower", "Corn"]
+		culture: ["Sunflower", "Corn"]
 		
 	},
 	{
@@ -174,7 +174,7 @@ export const products = [
 		type: "Flowers",
 		production: "Ukraine",
 		category: "fertilizers",
-		sort: ["Sunflower", "Corn"]
+		culture: ["Sunflower", "Wheat"]
 		
 	},
 	{
@@ -184,8 +184,8 @@ export const products = [
 		price: 12,
 		type: "Vegitablse",
 		production: "Poland",
-		category: "feed group",
-		sort: ["Corn"]
+		category: "seeds",
+		culture: ["Corn","Wheat"]
 		
 	},
 	{
@@ -196,7 +196,7 @@ export const products = [
 		type: "Flowers",
 		production: "Poland",
 		category: "help the agronomist",
-		sort: ["Corn"]
+		culture: ["Corn"]
 		
 	},
 	{
@@ -206,8 +206,8 @@ export const products = [
 		price: 12,
 		type: "Fruits",
 		production: "Poland",
-		category: "plants protecting tools",
-		sort: ["Corn"]
+		category: "seeds",
+		culture: ["Corn"]
 		
 	},
 	{
@@ -218,7 +218,7 @@ export const products = [
 		type: "Fruits",
 		production: "Poland",
 		category: "fertilizers",
-		sort: ["Corn"]
+		culture: ["Corn"]
 		
 	},
 	{
@@ -229,7 +229,7 @@ export const products = [
 		type: "Vegitablse",
 		production: "Poland",
 		category: "seeds",
-		sort: ["Corn"]
+		culture: ["Corn"]
 		
 	},
 	{
@@ -240,7 +240,7 @@ export const products = [
 		type: "Tree",
 		production: "Poland",
 		category: "help the agronomist",
-		sort: ["Corn"]
+		culture: ["Corn"]
 		
 	},
 	{
@@ -249,9 +249,9 @@ export const products = [
 		total: 1,
 		price: 12,
 		type: "Herbicides",
-		production: "Skop",
+		production: "Armada",
 		category: "plants protecting tools",
-		calture: ["Sunflower", "Corn", "Wheat", "Barley", "Turnip",]
+		culture: [ "Wheat", "Barley", "Turnip",]
 		
 	},
 	{
@@ -259,10 +259,9 @@ export const products = [
 		photo: photo1,
 		total: 2,
 		price: 14,
-		type: "Flowers",
+		type: "for animals",
 		production: "Ukraine",
 		category: "feed group",
-		sort: ["Sunflower", "Corn"]
 		
 	},
 	{
@@ -273,7 +272,7 @@ export const products = [
 		type: "Flowers",
 		production: "Ukraine",
 		category: "seeds",
-		sort: ["Sunflower", "Corn"]
+		culture: ["Sunflower", "Corn"]
 		
 	},
 	{
@@ -284,7 +283,7 @@ export const products = [
 		type: "Vegitablse",
 		production: "Poland",
 		category: "seeds",
-		sort: ["Corn"]
+		culture: ["Corn", "Turnip"]
 		
 	},
 	{
@@ -295,7 +294,7 @@ export const products = [
 		type: "Flowers",
 		production: "Poland",
 		category: "help the agronomist",
-		sort: ["Corn"]
+		culture: ["Corn"]
 		
 	},
 	{
@@ -303,11 +302,10 @@ export const products = [
 		photo: photo3,
 		total: 3,
 		price: 12,
-		type: "Tree",
+		type: "for fish",
 		production: "Poland",
 		category: "feed group",
-		sort: ["Corn"]
-		
+	
 	},
 	{
 		name: "Петунія Софістика",
@@ -317,7 +315,7 @@ export const products = [
 		type: "Fruits",
 		production: "Poland",
 		category: "fertilizers",
-		sort: ["Corn"]
+		culture: ["Corn"]
 		
 	},
 	{
@@ -328,18 +326,146 @@ export const products = [
 		type: "Vegitablse",
 		production: "Poland",
 		category: "seeds",
-		sort: ["Corn"]
+		culture: ["Corn"]
 		
 	},
 	{
-		name: "Петунія Софістика",
+		name: "Food for animals",
 		photo: photo3,
 		total: 3,
 		price: 10,
-		type: "Vegitablse",
+		type: "for animals",
+		production: "USA",
+
+	},
+	{
+		name: "Food for animals",
+		photo: photo3,
+		total: 3,
+		price: 10,
+		type: "for animals",
 		production: "Poland",
-		category: "seeds",
-		sort: ["Corn"]
+		category: "feed group",
+		
+	},
+	{
+		name: "Food for animals",
+		photo: photo1,
+		total: 3,
+		price: 7,
+		type: "for animals",
+		production: "Ukraine",
+		category: "feed group",
+		
+	},
+	{
+		name: "Food for animals",
+		photo: photo2,
+		total: 3,
+		price: 10,
+		type: "for animals",
+		production: "Poland",
+		category: "feed group",
+		
+	},
+	{
+		name: "Food for birds",
+		photo: photo3,
+		total: 1,
+		price: 9,
+		type: "for birds",
+		production: "Ukraine",
+		category: "feed group",
+		
+	},
+	{
+		name: "Food for birds",
+		photo: photo2,
+		total: 1,
+		price: 9,
+		type: "for birds",
+		production: "Ukraine",
+		category: "feed group",
+		
+	},
+	{
+		name: "Food for fish",
+		photo: photo4,
+		total: 1,
+		price: 9,
+		type: "for fish",
+		production: "Poland",
+		category: "feed group",
+		
+	},
+	{
+		name: "Food for fish",
+		photo: photo3,
+		total: 1,
+		price: 15,
+		type: "for fish",
+		production: "US",
+		category: "feed group",
+		
+	},
+	{
+		name: "Food for animals",
+		photo: photo1,
+		total: 3,
+		price: 7,
+		type: "for fish",
+		production: "Ukraine",
+		category: "feed group",
+		
+	},
+	{
+		name: "Food for fish",
+		photo: photo2,
+		total: 3,
+		price: 10,
+		type: "for fish",
+		production: "Poland",
+		category: "feed group",
+		
+	},
+	{
+		name: "Food for fish",
+		photo: photo3,
+		total: 1,
+		price: 9,
+		type: "for fish",
+		production: "Ukraine",
+		category: "feed group",
+		
+	},
+	{
+		name: "Food for fish",
+		photo: photo2,
+		total: 1,
+		price: 9,
+		type: "for fish",
+		production: "Ukraine",
+		category: "feed group",
+		
+	},
+	{
+		name: "Food for birds",
+		photo: photo4,
+		total: 1,
+		price: 9,
+		type: "for birds",
+		production: "Poland",
+		category: "feed group",
+		
+	},
+	{
+		name: "Food for birds",
+		photo: photo3,
+		total: 1,
+		price: 15,
+		type: "for birds",
+		production: "US",
+		category: "feed group",
 		
 	},
 ]

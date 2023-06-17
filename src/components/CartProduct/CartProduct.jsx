@@ -16,7 +16,7 @@ const CartProduct = ({name,price,photo}) => {
 					<h5 className="cart__title">{name}</h5>
 					<span className='cart__in-stock'>In stoke</span>
 					<div className="cart__price">$ {price}</div>
-					<p className="roll-btn"><RiShoppingCart2Line/></p>
+					<span className="roll-btn"><RiShoppingCart2Line/></span>
 				</div>
 			</div>
 		</Link>

@@ -6,15 +6,11 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
-
 import './SectionSwiper.css'
 
-import { FaLeaf } from 'react-icons/fa'
 import { BsArrowLeft, BsArrowRight } from 'react-icons/bs'
 
 import CartProduct from '../../CartProduct/CartProduct';
-
-import { products } from '../../../data'
 import Title from '../Title/Title';
 
 const SectionSwiper = ({ data, classes, title, totalSlides, buttons, paginationClass }) => {

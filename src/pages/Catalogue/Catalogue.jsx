@@ -1,36 +1,23 @@
-import React from 'react'
-import { IoIosArrowDown } from 'react-icons/io'
+import React, { useState } from 'react'
 import { Link, useSearchParams } from 'react-router-dom'
-
+import { useGlobalContaxt } from '../../context'
 import './Catalogue.css'
 
 import CartProduct from '../../components/CartProduct/CartProduct'
 import Title from '../../components/UI/Title/Title'
-import { useGlobalContaxt } from '../../context'
-import { useState } from 'react'
+import Select from '../../components/UI/Select/Select'
+import Filters from '../../components/UI/Filters/Filters'
 
 const Catalogue = () => {
-  const {products} = useGlobalContaxt()
+  const { products, windowWidth } = useGlobalContaxt()
   const [searchParams, setSearchParams] = useSearchParams()
-  const [isOpenSelect,setIsOpenSelect]= useState(false)
+  const [showFilter,setShowFilter] = useState(false)
   const searchCategory = searchParams.get('category')
   const categoryType = searchCategory.replace(searchCategory[0], searchCategory[0].toUpperCase()) || 'Seeds'
-  const handleSelect = (e)=>{
-    if(isOpenSelect){
-      setIsOpenSelect(false)
-    }
-  }
-  const filterType = Object.entries(products
-    .filter(item=>item.category === searchCategory)
-    .reduce((acc,item)=>{
-    const type =  item.type 
-    const currCount = Object.hasOwn(acc,type) ? acc[type] : 0
-    return {
-      ...acc,
-      [type]: currCount + 1
-    }
-  },{}))
+  
+  const handleOpenFilter = ()=>{
 
+  }
   return (
     <main className="main catalogue">
       <div className="container">
@@ -39,42 +26,38 @@ const Catalogue = () => {
           <Link to='catalogue' className="main__path">Catalogue</Link>
           <Link to={`catalogue?catalogue=${searchCategory}`} className="main__path">{categoryType}</Link>
         </div>
-        <Title title={categoryType} clases="catalogue" secondLeaf/>
+        {/* title component */}
+        <Title title={categoryType} clases="catalogue" secondLeaf />
         <div className="catalogue__content">
-          <div className="catalogue__total-products">Show {products.length} products</div>
-          <div className="catalgoue__select select">
-            <div className={`select__drobdown ${isOpenSelect && 'active'}`}>
-              <span className="select__title" onClick={()=>setIsOpenSelect(!isOpenSelect)}>Select by name: <span><IoIosArrowDown /></span></span>
-              <div className="select__list">
-                <span className="select__option">Select by price (up)</span>
-                <span className="select__option">Select by price (down)</span>
-                <span className="select__option">Select by name (A-Z)</span>
-                <span className="select__option">Select by name (Z-A)</span>
-              </div>
-            </div>
+          <div className="catalogue__content-top">
+
+            {windowWidth < 768
+              ?
+              <>
+                <button onClick={()=>setShowFilter(!showFilter)} className='filters__btn'>Filter</button>
+                <Select clases="catalogue" />
+                <div style={{textAlign: 'center'}} className="catalogue__total-products">Show {products.length} products</div>
+              </>
+              :
+              <>
+                <div className="catalogue__total-products">Show {products.length} products</div>
+                <Select clases="catalogue" />
+              </>
+            }
+
           </div>
           <div className="catalogue__filters">
-            <div className='catalogue__filter filter'>
-              {filterType.map((filter,i)=>(
-                <div key={i} className='filter__item'>
-                  <span className={i===0 ?"filter__name active": "filter__name"}>{filter[0]}</span>
-                  <span className='filter__total'>({filter[1]})</span>
-                </div>
-              ))}
-            </div>
-            <div className="catalogue__filter filter filter-more">
-              <h3 className="filter__title">Filter</h3>
-              <div className="filter__box">
-                <h5 className="filter__subtitle">Production</h5>
-              </div>
-            </div>
+            <Filters data={products} searchCategory={searchCategory} showFilter={showFilter}/>
           </div>
           <div className="catalogue__products">
-            {products.filter((item,index)=>index < 12 ).map((product,index)=>{
+            {products.filter((item, index) => index < 12).map((product, index) => {
               return (
-                <CartProduct {...product} key={index}/>
+                <CartProduct {...product} key={index} />
               )
-            }) }
+            })}
+            <div className="catalogue__pagination">
+
+            </div>
           </div>
         </div>
       </div>

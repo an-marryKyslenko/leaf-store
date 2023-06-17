@@ -2,12 +2,13 @@
 	flex: 0 1 255px;
 	border-radius: 20px;
 	position: relative;
-	transition: all 0.3s ease 0s;
-	
+	transition: top 0.3s ease-in 0s;
+	top: 0;
 }
 .cart:hover{
 	top: -10px;
 	box-shadow: 0px 0px 23px rgba(0, 0, 0, 0.15);
+	
 }
 .cart__container {
 	height: 330px;
@@ -60,5 +61,7 @@
 	color: #84BE51;
 	
 }
-.roll-btn {
+.cart:hover .roll-btn {
+	background-color: #8D3200;
+	color: #fff;
 }
