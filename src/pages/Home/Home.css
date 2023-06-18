@@ -103,7 +103,7 @@
 	color: #FFFFFF;
 	margin: 17px 0;
 	display: inline-block;
-	z-index: 5;
+
 }
 
 @keyframes kenburns-left {
@@ -133,6 +133,11 @@
 	}
 	.fullscreen__title{
 		margin-top: 200px;
+		font-size: 30px;
+		line-height: 40px;
+	}
+	.fullscreen__title .leaf{
+		top: 0px;
 	}
 	.orenge-btn{
 		margin: 0 0 40px;

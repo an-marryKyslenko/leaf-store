@@ -18,7 +18,6 @@
 .filter__item{
 	display: flex;
 	justify-content: space-between;
-	
 }
 .filter__name{
 	color: rgba(0, 0, 0, 0.5);
@@ -35,7 +34,7 @@
 
 .filter__title{
 	background-color: #84C551;
-	padding: 15px 0px;
+	padding: 15px;
 	text-align: center;
 	color: #fff;
 	font-weight: 600;
@@ -74,30 +73,82 @@
 	color: #fff;
 	font-weight: 600;
 	border-radius: 20px;
-	flex: 0 1 calc(50% - 30px);
-	
+	flex: 0 1 calc(50% - 20px);
 }
 
 @media (max-width: 768px){
-	.filter-more{
+	.filters{
 		position: fixed;
 		top: 0px;
 		left: -100%;
-		z-index: 9;
-		height: 100%;
-		
+		width: 100%;
+		height: 100vh;
+		display: flex;
+		opacity: 0;
+		z-index: 222;
+		transition: opacity 1s ease 0s;
 	}
+	.filters:before{
+		content: ''; 
+		min-width: 100%;
+		min-height: 100%;
+		background-color: rgba(0, 0, 0, 0.605);
+		position: absolute;
+		z-index: -1;
+	}
+	.filters.show{
+		left: 0;
+		opacity: 1;
+	}
+	.filters__select{
+		z-index: 1;
+	}
+
 	.filter:not(.filter-more){
 		display: none;
 	}
-	.filter-more.show{
-		left: -10px;
+	.filter-more{
+		width: 255px;
+		z-index: 3;
+		height: 100%;
+		position: relative;
+		border-top-left-radius: 0;
+		border-bottom-left-radius: 0;
+		left: -100%;
+		transition: left 0.4s ease 0s;
+		height: 100%;
+		overflow: scroll;
 	}
-	.filter-more.show .orange-btn{
+	.filters.show .filter-more{
+		left: 0;
+	}
+	.filter__title{
+		display: flex;
+		gap: 30px
+	}
+	.filter__title span{
+		font-size: 22px;
+		transition: all 0.3s ease 0s;
+	}
+	.filter__title span:hover{
+		color:#E74E13;
+	}
+	
+	.show .filter-more .orange-btn{
 		margin: 0 15px;
+		position: absolute;
+		bottom: 20px;
+		left: 40%;
+		transform: translateX(-50%);
 	}
 	.filters__select{
 		flex: 0 1 100%;
 		
+	}
+}
+
+@media (max-width: 460px){
+	.filters__btn{
+		flex: 1 1 100%;
 	}
 }

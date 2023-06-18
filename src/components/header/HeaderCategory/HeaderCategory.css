@@ -3,7 +3,7 @@
 	justify-content: space-between;
 	margin-bottom: 30px;
 	gap: 10px;
-	z-index: 5;
+	z-index: 120;
 }
 .category__btn{
 	border: 1px solid #1E6140;

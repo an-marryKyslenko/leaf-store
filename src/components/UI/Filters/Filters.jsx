@@ -1,11 +1,13 @@
 import React from 'react'
 
+import { BsArrowLeft } from 'react-icons/bs'
+
 import { filterFunction, filterSortFunction } from '../../../functions/filterFunction'
 import { FilterBox } from './FilterBox'
 
 import './Filters.css'
 
-const Filters = ({ data, searchCategory,showFilter}) => {
+const Filters = ({ data, searchCategory, changeState, showFilter }) => {
   const filterType = filterFunction(data, searchCategory, 'type')
   const filterProduction = filterFunction(data, searchCategory, 'production')
   const filterCalture = filterSortFunction(data, searchCategory, 'culture')
@@ -20,8 +22,11 @@ const Filters = ({ data, searchCategory,showFilter}) => {
           </div>
         ))}
       </div>
-      <div className={`catalogue__filter filter filter-more ${showFilter && "show"}`}>
-        <h3 className="filter__title">Filter</h3>
+      <div className="catalogue__filter filter filter-more">
+        <h3 className="filter__title">
+          {showFilter && <span onClick={() => changeState(false)}><BsArrowLeft /></span>}
+          Filter
+        </h3>
         <FilterBox subtitle="Manufacturer" data={filterProduction} />
         {filterCalture.length > 0
           && <FilterBox subtitle="Culture" data={filterCalture} />}
@@ -38,7 +43,15 @@ const Filters = ({ data, searchCategory,showFilter}) => {
             </label>
           </div>
         </div>
-        <button className="orange-btn">Apply</button>
+        {/* must be fixed button in the open filter*/}
+        {showFilter && (
+          <button
+            onClick={() => changeState(false)}
+            className="orange-btn">
+            Apply
+          </button>
+        )
+        }
       </div>
     </>
   )

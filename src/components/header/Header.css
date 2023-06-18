@@ -2,6 +2,7 @@
 	font-weight: 300;
 	color: #FFFFFF;
 	position: relative;
+	z-index: 12;
 }
 .header.absolute{
 	position: absolute;
@@ -59,15 +60,5 @@
 
 
 
-.roll-btn{
-	position: relative;
-	padding: 8px 10px 6px;
-	border: 1px solid #8C3213;
-	border-radius: 50%;
-	color: #8C3213;
-}
-.roll-btn:hover{
-	background-color: #8C3213;
-	color: #fff;
-}
+
 

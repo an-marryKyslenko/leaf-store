@@ -79,10 +79,10 @@ body{
   padding: 0 15px;
 }
 .main{
-	z-index: 12;
 	flex: 1 1 auto;
-	position: relative;
+	/* position: relative; */
 }
+
 .main::before{
 	content: '';
 	position: absolute;
@@ -150,7 +150,24 @@ body{
 	color:#84C551;
 }
 
+/* roll button */
 
+.roll-btn{
+	position: relative;
+	padding: 8px 10px 6px;
+	border: 1px solid #8C3213;
+	border-radius: 50%;
+	color: #8C3213;
+	width: 35px;
+	height: 35px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.roll-btn:hover{
+	background-color: #8C3213;
+	color: #fff;
+}
 
 @media (max-width:768px){
 	.logo__top{
