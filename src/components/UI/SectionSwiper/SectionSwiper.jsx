@@ -57,7 +57,7 @@ const SectionSwiper = ({ data, classes, title, totalSlides, buttons, paginationC
 					{data[0].name
 						?
 						data.filter((item, index) => index < totalSlides).map((product, index) => (
-							<SwiperSlide key={index}><CartProduct {...product} /></SwiperSlide>
+							<SwiperSlide key={index}><CartProduct {...product} path="catalogue"/></SwiperSlide>
 						))
 						:
 						data.map((partner, index) => {

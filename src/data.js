@@ -13,6 +13,7 @@ import part6 from './assets/images/partners/partper-6.png'
 
 export const products = [
 	{
+		id: "1",
 		name: "Скор 250 ЕС к.э.",
 		photo: photo2,
 		total: 1,
@@ -24,6 +25,7 @@ export const products = [
 		
 	},
 	{
+		id: "2",
 		name: "Скор 250 ЕС к.э.",
 		photo: photo2,
 		total: 1,
@@ -35,6 +37,7 @@ export const products = [
 		
 	},
 	{
+		id: "3",
 		name: "Скор 250 ЕС к.э.",
 		photo: photo2,
 		total: 1,
@@ -46,6 +49,7 @@ export const products = [
 		
 	},
 	{
+		id: "4",
 		name: "Скор 250 ЕС к.э.",
 		photo: photo2,
 		total: 1,
@@ -57,6 +61,7 @@ export const products = [
 		
 	},
 	{
+		id: "5",
 		name: "Скор 250 ЕС к.э.",
 		photo: photo4,
 		total: 1,
@@ -68,6 +73,7 @@ export const products = [
 		
 	},
 	{
+		id: "6",
 		name: "Петунія Софістика F1",
 		photo: photo1,
 		total: 2,
@@ -79,6 +85,7 @@ export const products = [
 		
 	},
 	{
+		id: "7",
 		name: "Петунія Софістика F1",
 		photo: photo4,
 		total: 2,
@@ -90,6 +97,7 @@ export const products = [
 		
 	},
 	{
+		id: "8",
 		name: "Петунія Софістика",
 		photo: photo1,
 		total: 3,
@@ -101,6 +109,7 @@ export const products = [
 		
 	},
 	{
+		id: "9",
 		name: "Скор 250 ЕС к.э.",
 		photo: photo2,
 		total: 1,
@@ -112,6 +121,7 @@ export const products = [
 		
 	},
 	{
+		id: "10",
 		name: "Скор 250 ЕС к.э.",
 		photo: photo2,
 		total: 1,
@@ -123,6 +133,7 @@ export const products = [
 		
 	},
 	{
+		id: "11",
 		name: "Скор 250 ЕС к.э.",
 		photo: photo2,
 		total: 1,
@@ -134,6 +145,7 @@ export const products = [
 		
 	},
 	{
+		id: "12",
 		name: "Скор 250 ЕС к.э.",
 		photo: photo2,
 		total: 1,
@@ -145,6 +157,7 @@ export const products = [
 		
 	},
 	{
+		id: "13",
 		name: "Скор 250 ЕС к.э.",
 		photo: photo4,
 		total: 1,
@@ -156,6 +169,7 @@ export const products = [
 		
 	},
 	{
+		id: "14",
 		name: "Петунія Софістика F1",
 		photo: photo1,
 		total: 2,
@@ -167,6 +181,7 @@ export const products = [
 		
 	},
 	{
+		id: "15",
 		name: "Петунія Софістика F1",
 		photo: photo4,
 		total: 2,
@@ -178,6 +193,7 @@ export const products = [
 		
 	},
 	{
+		id: "16",
 		name: "Петунія Софістика",
 		photo: photo1,
 		total: 3,
@@ -189,6 +205,7 @@ export const products = [
 		
 	},
 	{
+		id: "17",
 		name: "Петунія Софістика",
 		photo: photo1,
 		total: 3,
@@ -200,6 +217,7 @@ export const products = [
 		
 	},
 	{
+		id: "18",
 		name: "Петунія Софістика",
 		photo: photo3,
 		total: 3,
@@ -211,6 +229,7 @@ export const products = [
 		
 	},
 	{
+		id: "264",
 		name: "Петунія Софістика",
 		photo: photo4,
 		total: 3,
@@ -222,6 +241,7 @@ export const products = [
 		
 	},
 	{
+		id: "68461",
 		name: "Петунія Софістика",
 		photo: photo3,
 		total: 3,
@@ -233,6 +253,7 @@ export const products = [
 		
 	},
 	{
+		id: "661",
 		name: "Петунія Софістика",
 		photo: photo3,
 		total: 3,
@@ -244,6 +265,7 @@ export const products = [
 		
 	},
 	{
+		id: "813",
 		name: "Скор 250 ЕС к.э.",
 		photo: photo4,
 		total: 1,
@@ -255,6 +277,7 @@ export const products = [
 		
 	},
 	{
+		id: "54981",
 		name: "Петунія Софістика F1",
 		photo: photo1,
 		total: 2,
@@ -265,6 +288,7 @@ export const products = [
 		
 	},
 	{
+		id: "5651",
 		name: "Петунія Софістика F1",
 		photo: photo4,
 		total: 2,
@@ -276,6 +300,7 @@ export const products = [
 		
 	},
 	{
+		id: "adfad54",
 		name: "Петунія Софістика",
 		photo: photo1,
 		total: 3,
@@ -287,6 +312,7 @@ export const products = [
 		
 	},
 	{
+		id: "dfd4f",
 		name: "Петунія Софістика",
 		photo: photo1,
 		total: 3,
@@ -298,6 +324,7 @@ export const products = [
 		
 	},
 	{
+		id: "573831dfd",
 		name: "Петунія Софістика",
 		photo: photo3,
 		total: 3,
@@ -308,6 +335,7 @@ export const products = [
 	
 	},
 	{
+		id: "615dfd",
 		name: "Петунія Софістика",
 		photo: photo4,
 		total: 3,
@@ -319,6 +347,7 @@ export const products = [
 		
 	},
 	{
+		id: "dfd511",
 		name: "Петунія Софістика",
 		photo: photo3,
 		total: 3,
@@ -330,6 +359,7 @@ export const products = [
 		
 	},
 	{
+		id: "dfad1",
 		name: "Food for animals",
 		photo: photo3,
 		total: 3,
@@ -339,6 +369,7 @@ export const products = [
 
 	},
 	{
+		id: "df8d45d1fd",
 		name: "Food for animals",
 		photo: photo3,
 		total: 3,
@@ -349,6 +380,7 @@ export const products = [
 		
 	},
 	{
+		id: "dfda13",
 		name: "Food for animals",
 		photo: photo1,
 		total: 3,
@@ -359,6 +391,7 @@ export const products = [
 		
 	},
 	{
+		id: "df353",
 		name: "Food for animals",
 		photo: photo2,
 		total: 3,
@@ -369,6 +402,7 @@ export const products = [
 		
 	},
 	{
+		id: "df83ds",
 		name: "Food for birds",
 		photo: photo3,
 		total: 1,
@@ -379,6 +413,7 @@ export const products = [
 		
 	},
 	{
+		id: "dialdfd351",
 		name: "Food for birds",
 		photo: photo2,
 		total: 1,
@@ -389,6 +424,7 @@ export const products = [
 		
 	},
 	{
+		id: "dfd5132",
 		name: "Food for fish",
 		photo: photo4,
 		total: 1,
@@ -399,6 +435,7 @@ export const products = [
 		
 	},
 	{
+		id: "dadf51",
 		name: "Food for fish",
 		photo: photo3,
 		total: 1,
@@ -409,6 +446,7 @@ export const products = [
 		
 	},
 	{
+		id: "315",
 		name: "Food for animals",
 		photo: photo1,
 		total: 3,
@@ -419,6 +457,7 @@ export const products = [
 		
 	},
 	{
+		id: "8462",
 		name: "Food for fish",
 		photo: photo2,
 		total: 3,
@@ -429,6 +468,7 @@ export const products = [
 		
 	},
 	{
+		id: "9595",
 		name: "Food for fish",
 		photo: photo3,
 		total: 1,
@@ -439,6 +479,7 @@ export const products = [
 		
 	},
 	{
+		id: "498",
 		name: "Food for fish",
 		photo: photo2,
 		total: 1,
@@ -449,6 +490,7 @@ export const products = [
 		
 	},
 	{
+		id: "89898",
 		name: "Food for birds",
 		photo: photo4,
 		total: 1,
@@ -459,6 +501,7 @@ export const products = [
 		
 	},
 	{
+		id: "35684",
 		name: "Food for birds",
 		photo: photo3,
 		total: 1,

@@ -87,6 +87,10 @@ margin-bottom: 20px;
 	.footer__column:last-child{
 		flex: 0 1 100%;
 	}
+	.footer__link-to-top{
+		bottom: -10%;
+		right: 5%;
+	}
 }
 
 

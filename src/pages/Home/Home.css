@@ -93,19 +93,6 @@
 	color: rgba(0, 0, 0, 0.5);
 }
 
-.orange-btn{
-	font-weight: 700;
-	font-size: 16px;
-	line-height: 22px;
-	padding: 10px 60px;
-	background: #E74E13;
-	border-radius: 90px;
-	color: #FFFFFF;
-	margin: 17px 0;
-	display: inline-block;
-
-}
-
 @keyframes kenburns-left {
 	0% {
 	transform: scale(1) translate(0, 0);

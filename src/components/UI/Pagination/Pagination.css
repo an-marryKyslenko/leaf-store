@@ -2,11 +2,14 @@
 	flex: 0 1 100%;
 	display: flex;
 	justify-content: center;
-	gap: 30px;
+	gap: 10px;
 }
 .pagination .roll-btn{
 	color: #E74E13;
 	border: 1px solid #E74E13;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 .pagination .roll-btn.active,
 .pagination .roll-btn:hover{

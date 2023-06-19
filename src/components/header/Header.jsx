@@ -2,8 +2,6 @@ import React, { useState, useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 
 import { FaLeaf } from 'react-icons/fa'
-import { CiSearch } from 'react-icons/ci'
-import { useGlobalContaxt } from '../../context'
 
 import { RiShoppingCart2Line } from 'react-icons/ri'
 

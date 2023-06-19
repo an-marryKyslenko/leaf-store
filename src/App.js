@@ -1,25 +1,40 @@
 import React from 'react'
 import { RouterProvider, Route, createBrowserRouter, createRoutesFromElements } from 'react-router-dom'
 
-import Catalogue from './pages/Catalogue/Catalogue'
+import Catalogue, { loader as loaderCatalogue } from './pages/Catalogue/Catalogue'
 import Home from './pages/Home/Home'
 import About from './pages/About/About'
 import Loyout from './components/Loyout'
 import Authorization from './pages/Authorization/Authorization'
 import Contacts from './pages/Contacts/Contacts'
 import './App.css';
+import SingleProduct, { loader as loaderSingleProduct } from './pages/SingleProduct/SingleProduct'
+import NotFound from './pages/NotFound'
+import Error from './components/Error/Error'
 
 function App() {
-  const router = createBrowserRouter(createRoutesFromElements(
-		<Route path="/" element={<Loyout/>}>
-			<Route index element={<Home/>}/>
-			<Route path='catalogue' element={<Catalogue/>}/>
-			<Route path='about' element={<About/>}/>
-			<Route path='authorization' element={<Authorization/>}/>
-			<Route path='contacts' element={<Contacts/>}/>
+	const router = createBrowserRouter(createRoutesFromElements(
+		<Route path="/" element={<Loyout />}>
+			<Route index element={<Home />} />
+			<Route
+				loader={loaderCatalogue}
+				path='catalogue'
+				element={<Catalogue />}
+				errorElement={<Error/>}
+			/>
+			<Route
+				loader={loaderSingleProduct}
+				path='catalogue/:id'
+				element={<SingleProduct />}
+				errorElement={<Error/>}
+			/>
+			<Route path='about' element={<About />} />
+			<Route path='authorization' element={<Authorization />} />
+			<Route path='contacts' element={<Contacts />} />
+			<Route path='*' element={<NotFound/>}/>
 		</Route>
 	))
-	return <RouterProvider router={router}/>
+	return <RouterProvider router={router} />
 }
 
 export default App;

@@ -6,7 +6,7 @@ const ShowMoreText = ({ text, id }) => {
 	const [readMore, setReadMore] = useState(false);
 	return (
 		<div className='text' >
-			{!readMore
+			{readMore
 				?
 				text.map((pr, index) => (
 					<p key={index}>{pr}</p>
@@ -23,10 +23,10 @@ const ShowMoreText = ({ text, id }) => {
 				onClick={() => setReadMore(!readMore)}
 			>
 				{readMore
-					? 'Read more'
-					: 'Read less'
+					? 'Read less'
+					: 'Read more'
 				}
-				{readMore ? <IoIosArrowDown/>:<IoIosArrowUp/>}
+				{readMore ? <IoIosArrowUp/>:<IoIosArrowDown/>}
 			</button>
 
 		</div>

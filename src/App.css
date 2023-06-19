@@ -80,7 +80,7 @@ body{
 }
 .main{
 	flex: 1 1 auto;
-	/* position: relative; */
+	
 }
 
 .main::before{
@@ -160,15 +160,56 @@ body{
 	color: #8C3213;
 	width: 35px;
 	height: 35px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+	
 }
 .roll-btn:hover{
 	background-color: #8C3213;
 	color: #fff;
 }
+.roll-btn .total{
+	position: absolute;
+	top: -5px;
+	right: -5px;
+	background-color: #84BE51;
+	border-radius: 50%;
+	padding: 2px 6px;
+	font-size: 10px;
+	line-height: 12px;
+	color: #fff;
+}
 
+/* orange button */
+
+.orange-btn{
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 22px;
+	padding: 10px 60px;
+	background: #E74E13;
+	border-radius: 90px;
+	color: #FFFFFF;
+	margin: 17px 0;
+	display: inline-block;
+}
+.link-back-home.orange-btn{
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 300px;
+	margin: 0 auto;
+}
+.orange-btn span{
+	font-size: 22px;
+	display: inline-block;
+	position: relative;
+	left: 0;
+	transition: left 0.3s ease 0s;
+	margin-right: 20px;
+}
+.orange-btn:hover span {
+	left: -10px;
+}
 @media (max-width:768px){
 	.logo__top{
 		font-size: 32px;

@@ -1,0 +1,21 @@
+.about__content p{
+	font-size: 16px;
+	line-height: 20px;
+	color: rgba(0, 0, 0, 0.5);
+	margin-bottom: 10px;
+}
+.about__list span,
+.about__content p span{
+	color: #1E6140;
+	font-weight: 700;
+}
+.about__list{
+	margin: 20px 0;
+}
+
+.about__list li{
+	list-style: disc;
+	margin-left: 20px;
+	line-height: 24px;
+	font-weight: 300;
+}

@@ -5,9 +5,9 @@ import { RiShoppingCart2Line } from 'react-icons/ri'
 import { Link } from 'react-router-dom'
 
 
-const CartProduct = ({name,price,photo}) => {
+const CartProduct = ({name,price,photo,id,path}) => {
 	return (
-		<Link  className='cart'>
+		<Link to={path ? path+ '/' + id :id} className='cart'>
 			<div className="cart__container">
 				<div className="cart__img">
 					<img src={photo} alt="" />

@@ -10,12 +10,13 @@ import Phones from '../../components/UI/Phones/Phones'
 import './Footer.css'
 
 const Footer = () => {
+  
   return (
     <footer className='footer'>
       <div className="container">
         <div className="footer__content">
           <div className="footer__column">
-            <Link className='logo'>
+            <Link to="/" className='logo'>
               <span className='logo__top'>L<span className='logo__icon'><FaLeaf /></span>AF</span>
               <span className='logo__text'>Let's grow together</span>
             </Link>
@@ -24,19 +25,19 @@ const Footer = () => {
           <div className="footer__column">
             <h4 className="footer__subtitle">Information</h4>
             <ul className='footer__submenu'>
-              <li className='footer__link'><Link>About company</Link></li>
-              <li className='footer__link'><Link>Payment and delivery</Link></li>
-              <li className='footer__link'><Link>Partners</Link></li>
+              <li className='footer__link'><Link to="about">About company</Link></li>
+              <li className='footer__link'><Link to="">Payment and delivery</Link></li>
+              <li className='footer__link'><Link to="">Partners</Link></li>
             </ul>
           </div>
           <div className="footer__column">
             <h4 className="footer__subtitle">Product</h4>
             <ul className='footer__submenu'>
-              <li className='footer__link'><Link>Catalog of products</Link></li>
-              <li className='footer__link'><Link>Plants protecting tools</Link></li>
-              <li className='footer__link'><Link>Seed</Link></li>
-              <li className='footer__link'><Link>Fertilizers</Link></li>
-              <li className='footer__link'><Link>Help the agronomist</Link></li>
+              <li className='footer__link'><Link to="catalogue?category=seeds">Catalog of products</Link></li>
+              <li className='footer__link'><Link to="catalogue?category=plants%20protecting%20tools">Plants protecting tools</Link></li>
+              <li className='footer__link'><Link to="catalogue?category=seeds">Seed</Link></li>
+              <li className='footer__link'><Link to="catalogue?category=fertilizers">Fertilizers</Link></li>
+              <li className='footer__link'><Link to="catalogue?category=help%20the%20agronomist">Help the agronomist</Link></li>
             </ul>
           </div>
           <div className="footer__column">

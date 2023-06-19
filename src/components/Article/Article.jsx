@@ -1,6 +1,5 @@
 import React from 'react'
 import ShowMoreText from '../UI/ShowMore/ShowMoreText'
-import { FaLeaf } from 'react-icons/fa'
 
 import './Article.css'
 import Title from '../UI/Title/Title'
