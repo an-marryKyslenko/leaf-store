@@ -35,7 +35,7 @@ const Header = () => {
           <Search />
           <Phones />
           <div className="header__buttons">
-            <a className='header__button roll-btn'><RiShoppingCart2Line /><span className='total'>1</span></a>
+            <Link to='order' className='header__button roll-btn'><RiShoppingCart2Line /><span className='total'>1</span></Link>
             <p className='header__total-price'>$ <span>0,0</span></p>
           </div>
         </div>

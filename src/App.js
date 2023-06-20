@@ -7,10 +7,12 @@ import About from './pages/About/About'
 import Loyout from './components/Loyout'
 import Authorization from './pages/Authorization/Authorization'
 import Contacts from './pages/Contacts/Contacts'
-import './App.css';
 import SingleProduct, { loader as loaderSingleProduct } from './pages/SingleProduct/SingleProduct'
+import Order,{loader as orderLoader} from './pages/Order/Order'
 import NotFound from './pages/NotFound'
 import Error from './components/Error/Error'
+
+import './App.css';
 
 function App() {
 	const router = createBrowserRouter(createRoutesFromElements(
@@ -20,18 +22,24 @@ function App() {
 				loader={loaderCatalogue}
 				path='catalogue'
 				element={<Catalogue />}
-				errorElement={<Error/>}
+				errorElement={<Error />}
 			/>
 			<Route
 				loader={loaderSingleProduct}
 				path='catalogue/:id'
 				element={<SingleProduct />}
+				errorElement={<Error />}
+			/>
+			<Route
+				path="order"
+				element={<Order />}
+				loader={orderLoader}
 				errorElement={<Error/>}
 			/>
 			<Route path='about' element={<About />} />
 			<Route path='authorization' element={<Authorization />} />
 			<Route path='contacts' element={<Contacts />} />
-			<Route path='*' element={<NotFound/>}/>
+			<Route path='*' element={<NotFound />} />
 		</Route>
 	))
 	return <RouterProvider router={router} />

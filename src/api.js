@@ -6,7 +6,7 @@ function sleep(ms){
 
 export async function getProducts(id){
 	await sleep(1000)
-	const dataProduct = id ? products[id] : products
+	const dataProduct = id ? products.filter(item => item.id === id)[0] : products
 	if(!dataProduct){
 		throw{
 			message: 'Failed to fetch vans',

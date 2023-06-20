@@ -9,10 +9,14 @@ import { FaCcPaypal } from 'react-icons/fa'
 import Title from '../../components/UI/Title/Title'
 import './SingleProduct.css'
 import { useState } from 'react'
+import { useGlobalContaxt } from '../../context'
+
+// loader function
 export async function loader({ params }) {
 	return defer({ product: getProducts(params.id) })
 }
 const SingleProduct = () => {
+	const {setOpenBasket}=useGlobalContaxt()
 	const productPromise = useLoaderData()
 	const [activeComments, setActiveComments] = useState(false)
 	const [activeDiscribe, setActiveDiscribe] = useState(true)
@@ -27,13 +31,17 @@ const SingleProduct = () => {
 			setActiveDiscribe(true)
 		}
 	}
+	const handleAddToBasket = (id)=>{
+		setOpenBasket(true)
+		const product = localStorage.setItem('id',id)
+	}
 	return (
 		<main className='main single-product'>
 			<div className="container">
-				<Suspense fallback={<h2 className='title'>Loading...</h2>} ></Suspense>
+				<Suspense fallback={<h2 className='title'>Loading...</h2>} >
 				<Await resolve={productPromise.product}>
 					{product => {
-						const { name, price, photo, total, type, production, category } = product
+						const { name, price, photo, total,id, type, production, category } = product
 						return (
 							<>
 								<div className="single-product__main-info">
@@ -65,7 +73,7 @@ const SingleProduct = () => {
 										</div>
 										<div className="single-product__footer">
 											<p className='single-product__price'>${price}</p>
-											<button className='single-product__btn orange-btn'><span><RiShoppingCart2Line /></span>Bye</button>
+											<button onClick={()=>handleAddToBasket(id)} className='single-product__btn orange-btn'><span><RiShoppingCart2Line /></span>Bye</button>
 										</div>
 									</div>
 								</div>
@@ -110,6 +118,7 @@ const SingleProduct = () => {
 						)
 					}}
 				</Await>
+				</Suspense>
 			</div>
 		</main >
 	)

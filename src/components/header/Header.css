@@ -36,9 +36,8 @@
 	display: flex;
 	gap: 8px;
 	align-items: center;
-}
-.header__buttons{
 	position: relative;
+	z-index: 5;
 }
 
 .header__total-price{

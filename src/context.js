@@ -10,6 +10,7 @@ const ProviderContaxt = ({ children }) => {
 	const [openBurger, setOpenBurger] = useState(false)
 	const [category, setCategory] = useState('Seed')
 	const [windowWidth, setWindowWidth] = useState(window.innerWidth)
+	const [openBasket,setOpenBasket] = useState(false)
 	useEffect(() => {
 		function watch() {
 			setWindowWidth(window.innerWidth)
@@ -26,7 +27,9 @@ const ProviderContaxt = ({ children }) => {
 			category,
 			setCategory,
 			windowWidth,
-			products
+			products,
+			openBasket,
+			setOpenBasket,
 		}}>
 			{children}
 		</MyContaxt.Provider>
