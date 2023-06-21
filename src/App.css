@@ -26,6 +26,7 @@ input,
 button,
 textarea {
 	font-size: inherit;
+	outline: none;
 }
 button {
 	cursor: pointer;
@@ -58,6 +59,10 @@ body{
 	color: #000000;
 	overflow-x: hidden;
 }
+textarea{
+	overflow: auto;
+	resize:none;
+}
 #root{
 	height: 100%;
 }
@@ -66,17 +71,17 @@ body{
 
 .wrapper{
 	min-height: 100%;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  background-color: rgb(242, 242, 242);
-  overflow: hidden;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	background-color: rgb(242, 242, 242);
+	overflow: hidden;
 }
 
 .container{
 	margin: 0 auto;
-  max-width: 1410px;
-  padding: 0 15px;
+	max-width: 1410px;
+	padding: 0 15px;
 }
 .main{
 	flex: 1 1 auto;

@@ -10,6 +10,7 @@ import Title from '../../components/UI/Title/Title'
 import './SingleProduct.css'
 import { useState } from 'react'
 import { useGlobalContaxt } from '../../context'
+import Input from '../../components/UI/Inputs/Input'
 
 // loader function
 export async function loader({ params }) {
@@ -106,8 +107,8 @@ const SingleProduct = () => {
 										:
 										<div className="discribe__content comments">
 											<form className="comments__form">
-												<input className='comments__input' type="text" placeholder='Name' />
-												<input className='comments__input' type="text" placeholder='Email' />
+												<Input type="text" placeholder='Name' />
+												<Input type="text" placeholder='Email' />
 												<textarea className='comments__textarea' id="" cols="30" rows="10" placeholder='Your comment ...'></textarea>
 												<input className='orange-btn' type="submit" value="Add comment" />
 											</form>

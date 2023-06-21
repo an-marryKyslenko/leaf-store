@@ -19,8 +19,8 @@ const HeaderTop = () => {
 					<NavLink to='contacts' className={({ isActive }) => isActive ? 'header__link active' : 'header__link'}>Contacts</NavLink>
 				</nav>
 				<div className="header__enter">
-					<Link to='registration' className='header__enter-link'><span><BiLogIn /></span>Login</Link>
-					<Link to='login' className='header__enter-link'>Registration</Link>
+					<Link to='login' className='header__enter-link'><span><BiLogIn /></span>Login</Link>
+					<Link to='registration' className='header__enter-link'>Registration</Link>
 				</div>
 				<div
 					className={openBurger ?'header__burger open' : 'header__burger' }

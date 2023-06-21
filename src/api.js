@@ -1,5 +1,5 @@
+import { useGlobalContaxt } from "./context";
 import { products } from "./data";
-
 function sleep(ms){
 	return new Promise(res=>setTimeout(res,ms))
 }
@@ -15,5 +15,9 @@ export async function getProducts(id){
 		}
 	}
 	return dataProduct
-
+	
+}
+export async function getOrderList (){
+	await sleep(1000)
+	
 }

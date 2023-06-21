@@ -145,14 +145,13 @@ font-size: 30px;
 .comments__form{
 	display: flex;
 	flex-wrap: wrap;
+	justify-content: space-between;
 	gap: 30px;
 
 }
-.comments__input{
-	flex: 0 1 calc(50% - 30px);
-}
+
 .comments__textarea{
-	flex: 0 1 calc(100% - 30px);
+	flex: 0 1 100%;
 }
 .comments__input,
 .comments__textarea{
@@ -167,8 +166,7 @@ font-size: 30px;
 	}
 }
 @media (max-width: 610px){
-	.comments__textarea,
-	.comments__input{
+	.comments__textarea{
 		flex: 0 1 100%;
 	}
 }

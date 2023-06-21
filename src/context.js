@@ -1,8 +1,8 @@
 import React from "react";
-import { useContext, useState, useEffect,createContext } from "react";
+import { useContext, useState, useEffect, createContext } from "react";
 import { useSearchParams } from "react-router-dom";
 
-import {products} from './data'
+import { products } from './data'
 
 const MyContaxt = createContext()
 
@@ -10,7 +10,14 @@ const ProviderContaxt = ({ children }) => {
 	const [openBurger, setOpenBurger] = useState(false)
 	const [category, setCategory] = useState('Seed')
 	const [windowWidth, setWindowWidth] = useState(window.innerWidth)
-	const [openBasket,setOpenBasket] = useState(false)
+	const [openBasket, setOpenBasket] = useState(false)
+	const [orderList,setOrderList] = useState([])
+
+	const [totalPrice,setTotalPrice]=useState({
+		total: 0,
+		price: 0
+	})
+
 	useEffect(() => {
 		function watch() {
 			setWindowWidth(window.innerWidth)
@@ -30,6 +37,10 @@ const ProviderContaxt = ({ children }) => {
 			products,
 			openBasket,
 			setOpenBasket,
+			orderList,
+			setOrderList,
+			totalPrice,
+			setTotalPrice,
 		}}>
 			{children}
 		</MyContaxt.Provider>

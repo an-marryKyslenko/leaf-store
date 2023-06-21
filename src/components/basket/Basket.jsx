@@ -12,7 +12,7 @@ import Title from '../UI/Title/Title'
 import './Bastet.css'
 
 const Basket = () => {
-	const { openBasket, setOpenBasket } = useGlobalContaxt()
+	const { openBasket, setOpenBasket,setOrderList,totalPrice,setTotalPrice} = useGlobalContaxt()
 	const productId = localStorage.getItem('id')
 	const { name, id, photo, production, price,total } = products.find(item => item.id === productId)
 	const [quantity,setQuantity] = useState(1)
@@ -30,9 +30,12 @@ const Basket = () => {
 			setQuantity(quantity-1)
 		}
 	}
-	const handleOrder =()=>{
+	const handleOrder =(id)=>{
+		setOrderList(prev=>([...prev,{id: id,total: quantity}]))
+		setTotalPrice()
 		setOpenBasket(false)
 	}
+	
 	return (
 		<div className={openBasket ? 'basket open' : 'basket'}>
 			<button onClick={() => setOpenBasket(false)} className="basket__close"><IoMdClose /></button>
@@ -55,8 +58,8 @@ const Basket = () => {
 				</div>
 
 				<div className="basket__footer">
-					<button  onClick={() => setOpenBasket(false)} className='basket__btn'><RiShoppingCart2Line /> Back to shopping</button>
-					<Link to="order" onClick={handleOrder} className="basket__btn orange"><LuClipboardList /> Order</Link>
+					<button  onClick={() => handleOrder(id)} className='basket__btn'><RiShoppingCart2Line /> Back to shopping</button>
+					<Link to="order" onClick={()=>handleOrder(id)} className="basket__btn orange"><LuClipboardList /> Order</Link>
 				</div>
 			</div>
 		</div>

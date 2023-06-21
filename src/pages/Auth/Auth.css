@@ -1,0 +1,45 @@
+.auth__form{
+	display: flex;
+	flex-wrap: wrap;
+	gap: 20px 30px;
+	max-width: 540px;
+	margin: 50px auto;
+	justify-content: space-between;
+}
+.auth__btn{
+	flex: 0 1 100%;
+}
+.auth__check-label{
+	display: flex;
+	gap: 20px;
+	position: relative;
+}
+.auth__check-label span{
+	color: #84C551;
+}
+.auth__check{
+	opacity: 0;
+	width: 20px;
+}
+.auth__check-label .box{
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	top: 0;
+	left: 0;
+	border: 1px solid rgba(0, 0, 0, 0.5);
+	border-radius: 4px;
+}
+.auth__check-label .icon{
+	position: absolute;
+	top: -4px;
+	left: 0px;
+	font-size: 24px;
+	visibility: hidden;
+}
+.auth__check:checked + .box{
+	border-color: #84C551;
+}
+.auth__check:checked + .box + .icon{
+	visibility: visible;
+}
