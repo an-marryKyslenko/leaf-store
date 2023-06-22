@@ -1,13 +1,32 @@
 {
   "files": {
-    "main.css": "/an-marryKyslenko/leaf-store/static/css/main.23046c3d.css",
-    "main.js": "/an-marryKyslenko/leaf-store/static/js/main.c0e8be35.js",
+    "main.css": "/an-marryKyslenko/leaf-store/static/css/main.4984430d.css",
+    "main.js": "/an-marryKyslenko/leaf-store/static/js/main.214ac799.js",
+    "static/media/home-about.png": "/an-marryKyslenko/leaf-store/static/media/home-about.f31419fea462033d3ce7.png",
+    "static/media/section-fon.png": "/an-marryKyslenko/leaf-store/static/media/section-fon.5ae804864c11710e8799.png",
+    "static/media/main-photo.jfif": "/an-marryKyslenko/leaf-store/static/media/main-photo.b30c588500759b695434.jfif",
+    "static/media/home-section-fon.jfif": "/an-marryKyslenko/leaf-store/static/media/home-section-fon.062f41ff1012e2426a82.jfif",
+    "static/media/main-fon.jfif": "/an-marryKyslenko/leaf-store/static/media/main-fon.95d3601b9b050d5450b3.jfif",
+    "static/media/item-photo.png": "/an-marryKyslenko/leaf-store/static/media/item-photo.6883167740ba752e61bc.png",
+    "static/media/item-photo-4.png": "/an-marryKyslenko/leaf-store/static/media/item-photo-4.d86481630eb96af7e15b.png",
+    "static/media/item-photo-2.png": "/an-marryKyslenko/leaf-store/static/media/item-photo-2.b181d89d5490d2d0f32e.png",
+    "static/media/partner-3.png": "/an-marryKyslenko/leaf-store/static/media/partner-3.cc92a7a9026ca184afd8.png",
+    "static/media/item-photo-3.png": "/an-marryKyslenko/leaf-store/static/media/item-photo-3.7daf742a656b849cc3ce.png",
+    "static/media/partper-5.png": "/an-marryKyslenko/leaf-store/static/media/partper-5.55786ce42bdd663d5992.png",
+    "static/media/partner-2.png": "/an-marryKyslenko/leaf-store/static/media/partner-2.a91a62bdb72da133c618.png",
+    "static/media/partper-6.png": "/an-marryKyslenko/leaf-store/static/media/partper-6.a91a62bdb72da133c618.png",
+    "static/media/partper-4.png": "/an-marryKyslenko/leaf-store/static/media/partper-4.6099d409be1f40fbbf11.png",
+    "static/media/icon-btn-3.svg": "/an-marryKyslenko/leaf-store/static/media/icon-btn-3.164283547326172fa239286fabe296f7.svg",
+    "static/media/partner-1.png": "/an-marryKyslenko/leaf-store/static/media/partner-1.b3d0c347588af211b0b0.png",
+    "static/media/icon-btn-4.svg": "/an-marryKyslenko/leaf-store/static/media/icon-btn-4.5ed7bb39269e27510a36ad8629129577.svg",
+    "static/media/icon-btn-2.svg": "/an-marryKyslenko/leaf-store/static/media/icon-btn-2.caf4cfb8df0b45de4779146d107a283d.svg",
+    "static/media/icon-btn-5.svg": "/an-marryKyslenko/leaf-store/static/media/icon-btn-5.981cff3ad641e46bd985a72c48ce742a.svg",
     "index.html": "/an-marryKyslenko/leaf-store/index.html",
-    "main.23046c3d.css.map": "/an-marryKyslenko/leaf-store/static/css/main.23046c3d.css.map",
-    "main.c0e8be35.js.map": "/an-marryKyslenko/leaf-store/static/js/main.c0e8be35.js.map"
+    "main.4984430d.css.map": "/an-marryKyslenko/leaf-store/static/css/main.4984430d.css.map",
+    "main.214ac799.js.map": "/an-marryKyslenko/leaf-store/static/js/main.214ac799.js.map"
   },
   "entrypoints": [
-    "static/css/main.23046c3d.css",
-    "static/js/main.c0e8be35.js"
+    "static/css/main.4984430d.css",
+    "static/js/main.214ac799.js"
   ]
 }
