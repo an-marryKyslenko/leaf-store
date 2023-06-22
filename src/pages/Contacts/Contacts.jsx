@@ -8,6 +8,7 @@ import { BsTelephone } from 'react-icons/bs'
 
 import Title from '../../components/UI/Title/Title'
 import './Contacts.css'
+import Input from '../../components/UI/Inputs/Input'
 const Contacts = () => {
   return (
     <main className='main contacts'>
@@ -66,14 +67,14 @@ const Contacts = () => {
           </div>
         </div>
         {/* title component */}
-        <div className="contacts__form-contant ">
+        <div className="contacts__form-contant">
           <Title title="Write to us" clases="contacts" secondLeaf />
           <p className="contacts__text-form">Введіть ваші контактні дані і текст повідомлення, якщо у вас виникли питання або пропозиції, і ми найближчим часом відповімо вам.</p>
           <form className='contacts__form form'>
-            <input type="text" className="form__input" placeholder='First name'/>
-            <input type="text" className="form__input" placeholder='Last name'/>
-            <input type="text" className="form__input" placeholder='Phone number'/>
-            <input type="text" className="form__input" placeholder='Email'/>
+            <Input type="text" placeholder='First name'/>
+            <Input type="text" placeholder='Last name'/>
+            <Input type="text" placeholder='Phone number'/>
+            <Input type="text" placeholder='Email'/>
             <textarea name="" id="" cols="30" rows="10" className='form__textarea' placeholder='Your message ...'></textarea>
             <input type="submit" value="Submit" className='form__btn orange-btn'/>
           </form>

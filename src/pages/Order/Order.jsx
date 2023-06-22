@@ -17,9 +17,10 @@ export async function loader() {
 
 const Order = () => {
   const productPromise = useLoaderData()
-  const {orderList,setOrderList} = useGlobalContaxt()
+  const {orderList,setOrderList,amount} = useGlobalContaxt()
   const [isOrdered,setIsOrdered] = useState(false)
   
+
 
   return (
     <main className='main order'>
@@ -86,11 +87,11 @@ const Order = () => {
                     <div className="basket-order__footer">
                       <div className="basket-order__total">
                         <span >Together: </span>
-                        {/* <span>{totalQuantity === 1 ? totalQuantity + ' product': totalQuantity + ' products'}</span> */}
+                        <span>{amount.quantity === 1 ? amount.quantity + ' product': amount.quantity + ' products'}</span>
                       </div>
                       <div className="basket-order__total">
                         <span >Amount:</span>
-                        <span>$ </span>
+                        <span>$ {amount.totalPrice}</span>
                       </div>
                     </div>
                     <button onClick={()=>setIsOrdered(true)} className='basket-order__btn orange-btn'>Confirm order</button>

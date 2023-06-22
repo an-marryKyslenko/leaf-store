@@ -11,7 +11,7 @@ import { useGlobalContaxt } from '../../context'
 import './BurgerMemu.css'
 
 const BurgerMenu = () => {
-	const { openBurger,setOpenBurger } = useGlobalContaxt()
+	const { openBurger,setOpenBurger,amount } = useGlobalContaxt()
 
 	return (
 		<div  className={`burger-menu ${openBurger && 'open'}`}>
@@ -20,8 +20,8 @@ const BurgerMenu = () => {
 				<span className='logo__text'>Let's grow together</span>
 			</Link>
 			<div onClick={()=>setOpenBurger(false)} className="header__buttons">
-				<a className='header__button roll-btn'><RiShoppingCart2Line /><span className='total'>1</span></a>
-				<p className='header__total-price'>$ <span>0,0</span></p>
+				<Link to="order" className='header__button roll-btn'><RiShoppingCart2Line /><span className='total'>{amount.quantity}</span></Link>
+				<p className='header__total-price'>$ <span>{amount.totalPrice}</span></p>
 			</div>
 			<Search />
 			<Phones />

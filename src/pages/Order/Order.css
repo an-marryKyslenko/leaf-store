@@ -70,7 +70,12 @@
 	font-size: 20px;
 	line-height: 24px;
 }
-
+.basket-order__text{
+	font-size: 22px;
+	margin:50px auto;
+	color: #8C3213;
+	font-weight: 600;
+}
 
 .basket-order__footer{
 	

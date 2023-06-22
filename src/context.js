@@ -13,10 +13,12 @@ const ProviderContaxt = ({ children }) => {
 	const [openBasket, setOpenBasket] = useState(false)
 	const [orderList,setOrderList] = useState([])
 
-	const [totalPrice,setTotalPrice]=useState({
-		total: 0,
-		price: 0
-	})
+	const amount = orderList.reduce((acc,item)=>{
+		const p= acc.totalPrice + item.totalPrice
+		const q= acc.quantity + item.quantity
+		
+		return {totalPrice: p, quantity:q}
+	},{totalPrice: 0,quantity: 0})
 
 	useEffect(() => {
 		function watch() {
@@ -27,6 +29,7 @@ const ProviderContaxt = ({ children }) => {
 			window.removeEventListener('resize', watch)
 		}
 	}, [])
+
 	return (
 		<MyContaxt.Provider value={{
 			setOpenBurger,
@@ -39,8 +42,7 @@ const ProviderContaxt = ({ children }) => {
 			setOpenBasket,
 			orderList,
 			setOrderList,
-			totalPrice,
-			setTotalPrice,
+			amount
 		}}>
 			{children}
 		</MyContaxt.Provider>

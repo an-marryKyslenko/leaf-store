@@ -6,6 +6,10 @@
 	margin: 50px auto;
 	justify-content: space-between;
 }
+.auth__question a{
+	color:#84C551;
+	font-weight: 600;
+}
 .auth__btn{
 	flex: 0 1 100%;
 }

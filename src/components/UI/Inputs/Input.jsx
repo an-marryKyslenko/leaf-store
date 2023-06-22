@@ -1,11 +1,10 @@
 import React from 'react'
 import './Input.css'
-const Input = ({ placeholder, type, fuctions, clases }) => {
+const Input = ({ ...props}) => {
 	return (
 		<input
-			className={`input ${clases ? clases : ''}`}
-			type={type}
-			placeholder={placeholder}
+			className={`input ${props.clases ? props.clases : ''}`}
+			{...props}
 			/>
 	)
 }

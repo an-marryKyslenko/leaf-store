@@ -12,8 +12,10 @@ import HeaderCategory from './HeaderCategory/HeaderCategory'
 import Search from '../UI/Search/Search'
 import Phones from '../UI/Phones/Phones'
 import BurgerMenu from '../burgerMenu/BurgerMenu'
+import { useGlobalContaxt } from '../../context'
 
 const Header = () => {
+  const {amount} = useGlobalContaxt()
   const [isHome, setIsHome] = useState(false)
   const { pathname } = useLocation()
 
@@ -35,8 +37,8 @@ const Header = () => {
           <Search />
           <Phones />
           <div className="header__buttons">
-            <Link to='order' className='header__button roll-btn'><RiShoppingCart2Line /><span className='total'>1</span></Link>
-            <p className='header__total-price'>$ <span>0,0</span></p>
+            <Link to='order' className='header__button roll-btn'><RiShoppingCart2Line /><span className='total'>{amount.quantity}</span></Link>
+            <p className='header__total-price'>$ <span>{amount.totalPrice}</span></p>
           </div>
         </div>
         <HeaderCategory />

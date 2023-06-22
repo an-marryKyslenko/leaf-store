@@ -5,7 +5,7 @@ import Catalogue, { loader as loaderCatalogue } from './pages/Catalogue/Catalogu
 import Home from './pages/Home/Home'
 import About from './pages/About/About'
 import Loyout from './components/Loyout'
-import Auth, { loader as authLoadeer } from './pages/Auth/Auth'
+import Auth, { loader as authLoadeer, action as authAction } from './pages/Auth/Auth'
 import Contacts from './pages/Contacts/Contacts'
 import SingleProduct, { loader as loaderSingleProduct } from './pages/SingleProduct/SingleProduct'
 import Order, { loader as orderLoader } from './pages/Order/Order'
@@ -40,11 +40,13 @@ function App() {
 				path='registration'
 				element={<Auth />}
 				loader={authLoadeer}
+				action={authAction}
 				errorElement={<Error />}
 			/>
 			<Route
 				path='login'
 				element={<Auth />}
+				action={authAction}
 				loader={authLoadeer}
 				errorElement={<Error />}
 			/>

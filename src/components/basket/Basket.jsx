@@ -12,10 +12,11 @@ import Title from '../UI/Title/Title'
 import './Bastet.css'
 
 const Basket = () => {
-	const { openBasket, setOpenBasket,setOrderList,totalPrice,setTotalPrice} = useGlobalContaxt()
+	const { openBasket, setOpenBasket,setOrderList} = useGlobalContaxt()
 	const productId = localStorage.getItem('id')
 	const { name, id, photo, production, price,total } = products.find(item => item.id === productId)
 	const [quantity,setQuantity] = useState(1)
+
 	const increaseQuantity = () => {
 		if(quantity >= total){
 			setQuantity(total)
@@ -31,9 +32,9 @@ const Basket = () => {
 		}
 	}
 	const handleOrder =(id)=>{
-		setOrderList(prev=>([...prev,{id: id,total: quantity}]))
-		setTotalPrice()
+		setOrderList(prev=>([...prev,{id: id,totalPrice: quantity*price, quantity}]))
 		setOpenBasket(false)
+		setQuantity(1)
 	}
 	
 	return (
