@@ -1,5 +1,5 @@
-import React, {  useState } from 'react'
-import { Await, defer, Link, useLoaderData } from 'react-router-dom'
+import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 
 import { useGlobalContaxt } from '../../context'
 import { products } from '../../data'
@@ -12,31 +12,32 @@ import Title from '../UI/Title/Title'
 import './Bastet.css'
 
 const Basket = () => {
-	const { openBasket, setOpenBasket,setOrderList} = useGlobalContaxt()
+	const { openBasket, setOpenBasket, setOrderList } = useGlobalContaxt()
 	const productId = localStorage.getItem('id')
-	const { name, id, photo, production, price,total } = products.find(item => item.id === productId)
-	const [quantity,setQuantity] = useState(1)
+	const productItem = products.filter(item => item.id === productId)[0]
+	const { name, id, photo, production, price, total } = productItem
+	const [quantity, setQuantity] = useState(1)
 
 	const increaseQuantity = () => {
-		if(quantity >= total){
+		if (quantity >= total) {
 			setQuantity(total)
-		}else{
+		} else { 
 			setQuantity(quantity + 1)
 		}
 	}
 	const decreaseQuantity = () => {
-		if(quantity <= 0){
+		if (quantity <= 0) {
 			setQuantity(0)
-		}else{
-			setQuantity(quantity-1)
+		} else {
+			setQuantity(quantity - 1)
 		}
 	}
-	const handleOrder =(id)=>{
-		setOrderList(prev=>([...prev,{id: id,totalPrice: quantity*price, quantity}]))
+	const handleOrder = (id) => {
+		setOrderList(prev => ([...prev, { id: id, totalPrice: quantity * price, quantity }]))
 		setOpenBasket(false)
 		setQuantity(1)
 	}
-	
+
 	return (
 		<div className={openBasket ? 'basket open' : 'basket'}>
 			<button onClick={() => setOpenBasket(false)} className="basket__close"><IoMdClose /></button>
@@ -59,8 +60,8 @@ const Basket = () => {
 				</div>
 
 				<div className="basket__footer">
-					<button  onClick={() => handleOrder(id)} className='basket__btn'><RiShoppingCart2Line /> Back to shopping</button>
-					<Link to="order" onClick={()=>handleOrder(id)} className="basket__btn orange"><LuClipboardList /> Order</Link>
+					<button onClick={() => handleOrder(id)} className='basket__btn'><RiShoppingCart2Line /> Back to shopping</button>
+					<Link to="order" onClick={() => handleOrder(id)} className="basket__btn orange"><LuClipboardList /> Order</Link>
 				</div>
 			</div>
 		</div>
