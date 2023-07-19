@@ -1,24 +1,23 @@
+import { useCallback } from "react";
 import { products,user } from "./data";
 
-function sleep(ms){
-	return new Promise(res=>setTimeout(res,ms))
-}
+const url = 'https://leaf-store-api-1e132ca5313e.herokuapp.com/api/v1'
+
 
 export async function getProducts(id){
-	await sleep(1000)
-	const dataProduct = id ? products.filter(item => item.id === id)[0] : products
-	if(!dataProduct){
-		throw{
-			message: 'Failed to fetch vans',
-			statusText: 'Bed request',
-			status: '400'
+		try {
+			const res = await fetch(`${url}/products`)
+			const data = await res.json()
+			const {products} = data
+			const dataProduct = id ? products.filter(item => item.id === id)[0] : products
+			return dataProduct
+		} catch (error) {
+			console.log(error)
 		}
-	}
-	return dataProduct
+	
 	
 }
 export async function getUser (creds){
-	await sleep(1000);
 	const data = user.email === creds.email && user.password || creds.password ? user : null;
 	if(!data){
 		throw{
@@ -31,5 +30,4 @@ export async function getUser (creds){
 }
 
 export async function setUser(creds){
-	await sleep(1000)
 }

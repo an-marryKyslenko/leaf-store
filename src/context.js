@@ -1,24 +1,25 @@
-import React from "react";
+import React, { useCallback } from "react";
 import { useContext, useState, useEffect, createContext } from "react";
 import { useSearchParams } from "react-router-dom";
 
-import { products } from './data'
+const url = 'https://leaf-store-api-1e132ca5313e.herokuapp.com/api/v1'
 
 const MyContaxt = createContext()
 
 const ProviderContaxt = ({ children }) => {
+	const [products, setProducts] = useState({})
 	const [openBurger, setOpenBurger] = useState(false)
 	const [category, setCategory] = useState('Seed')
 	const [windowWidth, setWindowWidth] = useState(window.innerWidth)
 	const [openBasket, setOpenBasket] = useState(false)
-	const [orderList,setOrderList] = useState([])
+	const [orderList, setOrderList] = useState([])
 
-	const amount = orderList.reduce((acc,item)=>{
-		const p= acc.totalPrice + item.totalPrice
-		const q= acc.quantity + item.quantity
-		
-		return {totalPrice: p, quantity:q}
-	},{totalPrice: 0,quantity: 0})
+	const amount = orderList.reduce((acc, item) => {
+		const p = acc.totalPrice + item.totalPrice
+		const q = acc.quantity + item.quantity
+
+		return { totalPrice: p, quantity: q }
+	}, { totalPrice: 0, quantity: 0 })
 
 	useEffect(() => {
 		function watch() {
