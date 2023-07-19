@@ -1,13 +1,12 @@
-import React, { useCallback } from "react";
+import React from "react";
 import { useContext, useState, useEffect, createContext } from "react";
-import { useSearchParams } from "react-router-dom";
 
 const url = 'https://leaf-store-api-1e132ca5313e.herokuapp.com/api/v1'
 
 const MyContaxt = createContext()
 
 const ProviderContaxt = ({ children }) => {
-	const [products, setProducts] = useState({})
+	const [products, setProducts] = useState([])
 	const [openBurger, setOpenBurger] = useState(false)
 	const [category, setCategory] = useState('Seed')
 	const [windowWidth, setWindowWidth] = useState(window.innerWidth)
@@ -26,7 +25,16 @@ const ProviderContaxt = ({ children }) => {
 			const res = await fetch(`${url}/products`)
 			const data = await res.json()
 			const { products } = data
-			setProducts(products)
+			if(products){
+				const newProducts = products.map(item=>{
+					const {_id,quantity} = item
+					return {...item,id:_id,totl:quantity}
+				})
+				setProducts(newProducts)
+				
+			}else{
+				setProducts([])
+			}
 		} catch (error) {
 			console.log(error)
 		}
@@ -35,8 +43,6 @@ const ProviderContaxt = ({ children }) => {
 	}
 	useEffect(() => {
 		getProducts()
-	}, [])
-	useEffect(() => {
 		function watch() {
 			setWindowWidth(window.innerWidth)
 		}

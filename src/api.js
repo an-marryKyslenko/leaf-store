@@ -1,5 +1,5 @@
-import { useCallback } from "react";
-import { products,user } from "./data";
+
+import { user } from "./data";
 
 const url = 'https://leaf-store-api-1e132ca5313e.herokuapp.com/api/v1'
 
@@ -9,8 +9,16 @@ export async function getProducts(id){
 			const res = await fetch(`${url}/products`)
 			const data = await res.json()
 			const {products} = data
-			const dataProduct = id ? products.filter(item => item.id === id)[0] : products
-			return dataProduct
+			if(products){
+				const newProducts = products.map(item=>{
+					const {_id,quantity} = item
+					return {...item,id:_id,total:quantity}
+				})
+				const dataProducts = id ? newProducts.filter(item => item.id === id)[0] : newProducts
+				// console.log(dataProducts);
+				return dataProducts
+			}
+			return []
 		} catch (error) {
 			console.log(error)
 		}
@@ -18,7 +26,7 @@ export async function getProducts(id){
 	
 }
 export async function getUser (creds){
-	const data = user.email === creds.email && user.password || creds.password ? user : null;
+	const data = (user.email === creds.email) && (user.password === creds.password) ? user : null;
 	if(!data){
 		throw{
 			message: "No user with those credintials found!",

@@ -15,7 +15,8 @@ const Basket = () => {
 	const { openBasket, setOpenBasket, setOrderList } = useGlobalContaxt()
 	const productId = localStorage.getItem('id')
 	const productItem = products.filter(item => item.id === productId)[0]
-	const { name, id, photo, production, price, total } = productItem
+		const { name, id, photo, production, price, total } = productItem
+	
 	const [quantity, setQuantity] = useState(1)
 
 	const increaseQuantity = () => {
@@ -39,11 +40,12 @@ const Basket = () => {
 	}
 
 	return (
-		<div className={openBasket ? 'basket open' : 'basket'}>
+		<div className={'basket'}>
 			<button onClick={() => setOpenBasket(false)} className="basket__close"><IoMdClose /></button>
 			<div className="basket__container">
 				<Title clases="basket" title="Basket" secondLeaf />
-
+				{productItem
+				?
 				<div className="basket__content">
 					<h4 className="basket__product-name">{name}</h4>
 					<div className="basket__img">
@@ -58,6 +60,8 @@ const Basket = () => {
 						<button onClick={increaseQuantity} className='quantity__btn'>+</button>
 					</div>
 				</div>
+				: <p>No product</p>
+				}
 
 				<div className="basket__footer">
 					<button onClick={() => handleOrder(id)} className='basket__btn'><RiShoppingCart2Line /> Back to shopping</button>
