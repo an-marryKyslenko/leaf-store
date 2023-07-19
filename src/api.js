@@ -11,8 +11,11 @@ export async function getProducts(id){
 			const {products} = data
 			if(products){
 				const newProducts = products.map(item=>{
-					const {_id,quantity} = item
-					return {...item,id:_id,total:quantity}
+					const {_id,quantity,img} = item
+					const base64String = btoa(
+						String.fromCharCode(...new Uint8Array(img.data))
+					)
+					return {...item,id:_id,total:quantity, image: `data:image/png;base64,${base64String}`}
 				})
 				const dataProducts = id ? newProducts.filter(item => item.id === id)[0] : newProducts
 				// console.log(dataProducts);
