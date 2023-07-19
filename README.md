@@ -1,5 +1,8 @@
 Project is named LEAF STORE;
 
+App is opened by Vercel.
+https://leaf-store.vercel.app/
+
 #### Hokes:
 
 useState,
