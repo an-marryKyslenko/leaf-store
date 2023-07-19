@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom'
 import { useGlobalContaxt } from '../../context'
 
 
-const CartProduct = ({name,price,photo,id,path}) => {
+const CartProduct = ({name,price,image,id,path}) => {
 	const {setOpenBasket} = useGlobalContaxt()
 
 	const handleAddToBasket = (e,id)=>{
@@ -19,7 +19,7 @@ const CartProduct = ({name,price,photo,id,path}) => {
 		<Link to={path ? path+ '/' + id :id} className='cart'>
 			<div className="cart__container">
 				<div className="cart__img">
-					<img src={photo} alt="" />
+					<img src={image} alt="" />
 				</div>
 				<div className="cart__info">
 					<h5 className="cart__title">{name}</h5>
