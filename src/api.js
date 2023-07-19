@@ -13,7 +13,7 @@ export async function getProducts(id){
 				const newProducts = products.map(item=>{
 					const {_id,quantity,img} = item
 					const base64String = btoa(
-						String.fromCharCode(...new Uint8Array(img.data))
+						String.fromCharCode(...new Uint8Array(img.data.data))
 					)
 					return {...item,id:_id,total:quantity, image: `data:image/png;base64,${base64String}`}
 				})
