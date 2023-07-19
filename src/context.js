@@ -21,6 +21,21 @@ const ProviderContaxt = ({ children }) => {
 		return { totalPrice: p, quantity: q }
 	}, { totalPrice: 0, quantity: 0 })
 
+	async function getProducts() {
+		try {
+			const res = await fetch(`${url}/products`)
+			const data = await res.json()
+			const { products } = data
+			setProducts(products)
+		} catch (error) {
+			console.log(error)
+		}
+
+
+	}
+	useEffect(() => {
+		getProducts()
+	}, [])
 	useEffect(() => {
 		function watch() {
 			setWindowWidth(window.innerWidth)

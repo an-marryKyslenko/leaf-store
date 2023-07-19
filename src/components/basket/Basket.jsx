@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 
 import { useGlobalContaxt } from '../../context'
-import { products } from '../../data'
 
 import { RiShoppingCart2Line } from 'react-icons/ri'
 import { LuClipboardList } from 'react-icons/lu'
@@ -12,6 +11,7 @@ import Title from '../UI/Title/Title'
 import './Bastet.css'
 
 const Basket = () => {
+	const {products} = useGlobalContaxt()
 	const { openBasket, setOpenBasket, setOrderList } = useGlobalContaxt()
 	const productId = localStorage.getItem('id')
 	const productItem = products.filter(item => item.id === productId)[0]
