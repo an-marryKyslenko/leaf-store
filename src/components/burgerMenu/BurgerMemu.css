@@ -10,7 +10,7 @@
 	transition: 0.4s ease-in;
 	display: flex;
 	flex-wrap: wrap;
-	align-items: start;
+	align-items: flex-start;
 	justify-content: space-between;
 	overflow-y: scroll;
 }

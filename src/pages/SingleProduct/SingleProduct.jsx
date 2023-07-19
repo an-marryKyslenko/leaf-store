@@ -34,7 +34,7 @@ const SingleProduct = () => {
 	}
 	const handleAddToBasket = (id)=>{
 		setOpenBasket(true)
-		const product = localStorage.setItem('id',id)
+		localStorage.setItem('id',id)
 	}
 	return (
 		<main className='main single-product'>
@@ -106,10 +106,10 @@ const SingleProduct = () => {
 										</div>
 										:
 										<div className="discribe__content comments">
-											<form className="comments__form">
+											<form id='comments-form' className="comments__form">
 												<Input type="text" placeholder='Name' />
 												<Input type="text" placeholder='Email' />
-												<textarea className='comments__textarea' id="" cols="30" rows="10" placeholder='Your comment ...'></textarea>
+												<textarea className='comments__textarea' cols="30" rows="10" placeholder='Your comment ...'></textarea>
 												<input className='orange-btn' type="submit" value="Add comment" />
 											</form>
 										</div>

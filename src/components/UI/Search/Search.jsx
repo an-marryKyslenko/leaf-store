@@ -7,8 +7,8 @@ import './Search.css'
 const Search = () => {
 	return (
 		<div className="header__search search">
-			<input type="text" placeholder='Search ...' className='search__input' />
-			<button type="submit" className='search__btn'><CiSearch /></button>
+			<input name='search-field' type="text" placeholder='Search ...' className='search__input' />
+			<button name='search-bnt' type="submit" className='search__btn'><CiSearch /></button>
 		</div>
 	)
 }

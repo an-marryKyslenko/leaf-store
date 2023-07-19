@@ -15,7 +15,7 @@ const Contacts = () => {
       <div className="container">
         <div className="main__paths">
           <Link to='/' className="main__path">Home</Link>
-          <a href='#' className="main__path">Contacts</a>
+          <p className="main__path">Contacts</p>
         </div>
         {/* title component */}
         <Title title="Contacts" clases="contacts" secondLeaf />
@@ -57,7 +57,7 @@ const Contacts = () => {
                 <span>(050) 42-42-824</span>
               </p>
             </div>
-            <div class="contacts__item">
+            <div className="contacts__item">
               <span className='contacts__icon'><BsTelephone /></span>
               <p>
                 <span>(050) 42-42-820</span>
@@ -70,13 +70,13 @@ const Contacts = () => {
         <div className="contacts__form-contant">
           <Title title="Write to us" clases="contacts" secondLeaf />
           <p className="contacts__text-form">Введіть ваші контактні дані і текст повідомлення, якщо у вас виникли питання або пропозиції, і ми найближчим часом відповімо вам.</p>
-          <form className='contacts__form form'>
-            <Input type="text" placeholder='First name'/>
-            <Input type="text" placeholder='Last name'/>
-            <Input type="text" placeholder='Phone number'/>
-            <Input type="text" placeholder='Email'/>
-            <textarea name="" id="" cols="30" rows="10" className='form__textarea' placeholder='Your message ...'></textarea>
-            <input type="submit" value="Submit" className='form__btn orange-btn'/>
+          <form id='contacts-form' className='contacts__form form'>
+            <Input id="contacts-name" type="text" placeholder='First name' />
+            <Input id="contacts-last-name" type="text" placeholder='Last name' />
+            <Input id="contacts-phone" type="text" placeholder='Phone number' />
+            <Input id="contacts-email" type="text" placeholder='Email' />
+            <textarea id="contacts-text" cols="30" rows="10" className='form__textarea' placeholder='Your message ...'></textarea>
+            <input id="contacts-bnt" type="submit" value="Submit" className='form__btn orange-btn' />
           </form>
         </div>
       </div>
