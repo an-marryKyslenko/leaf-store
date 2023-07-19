@@ -12,8 +12,6 @@ import Filters from '../../components/UI/Filters/Filters'
 import Pagination from '../../components/UI/Pagination/Pagination'
 import Article from '../../components/Article/Article'
 import { getProducts } from '../../api'
-import { RiH2 } from 'react-icons/ri'
-import Basket from '../../components/basket/Basket'
 
 export async function loader() {
   return defer({ products: getProducts() })
@@ -85,7 +83,7 @@ const Catalogue = () => {
         </Suspense>
       </div>
       <Article title={categoryType} text={text} />
-      <Basket/>
+
     </main>
   )
 }
