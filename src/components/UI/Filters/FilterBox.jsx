@@ -5,7 +5,6 @@ export const FilterBox = ({data,subtitle}) => {
 		<div className="filter__box">
 			<h5 className="filter__subtitle">{subtitle}</h5>
 			{data.map((production, index) => {
-				console.log(index);
 			return (
 				<div key={index} id={index} className="filter__item">
 					<label htmlFor={`production-${index}`} className="filter__name">

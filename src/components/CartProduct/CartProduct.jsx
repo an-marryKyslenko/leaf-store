@@ -6,17 +6,17 @@ import { Link } from 'react-router-dom'
 import { useGlobalContaxt } from '../../context'
 
 
-const CartProduct = ({name,price,image,id,path}) => {
-	const {setOpenBasket} = useGlobalContaxt()
+const CartProduct = ({ name, price, image, id, path }) => {
+	const { setOpenBasket } = useGlobalContaxt()
 
-	const handleAddToBasket = (e,id)=>{
+	const handleAddToBasket = (e, id) => {
 		e.preventDefault()
 		setOpenBasket(true)
-		localStorage.setItem('id',id)
+		localStorage.setItem('id', id)
 	}
-
+	
 	return (
-		<Link to={path ? path+ '/' + id :id} className='cart'>
+		<Link to={path ? path + '/' + id : id} className='cart'>
 			<div className="cart__container">
 				<div className="cart__img">
 					<img src={image} alt="" />
@@ -25,7 +25,7 @@ const CartProduct = ({name,price,image,id,path}) => {
 					<h5 className="cart__title">{name}</h5>
 					<span className='cart__in-stock'>In stoke</span>
 					<div className="cart__price">$ {price}</div>
-					<span onClick={(e)=>handleAddToBasket(e,id)} className="roll-btn"><RiShoppingCart2Line/></span>
+					<span onClick={(e) => handleAddToBasket(e, id)} className="roll-btn"><RiShoppingCart2Line /></span>
 				</div>
 			</div>
 		</Link>
