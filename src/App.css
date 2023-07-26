@@ -119,6 +119,7 @@ textarea{
 .main__path{
 	color: rgba(0, 0, 0, 0.5);
 	position: relative;
+	text-transform: capitalize;
 }
 .main__path:not(:last-child)::after{
 	position: absolute;

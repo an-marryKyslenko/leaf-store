@@ -1,22 +1,23 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { useGlobalContaxt } from '../../context'
+
 import './Home.css'
 
 import { FaLeaf } from 'react-icons/fa'
 
-import { partners, products } from '../../data'
-
 import aboutPhone from '../../assets/images/home-about.png'
 import fullscrennImage from "../../assets/images/main-photo.jfif"
-import { useGlobalContaxt } from '../../context'
 
-import { text } from '../../data'
+import { text, partners } from '../../data'
 import Article from '../../components/Article/Article'
 import SectionSwiper from '../../components/UI/SectionSwiper/SectionSwiper'
 import Title from '../../components/UI/Title/Title'
+import Loading from '../../components/UI/Loading/Loading'
+
 
 const Home = () => {
-  const { windowWidth } = useGlobalContaxt()
+  const { windowWidth, products, isLoading } = useGlobalContaxt()
+  // console.log(products);
   return (
     <main className='main home'>
       <section className="home__fullscreen fullscreen">
@@ -49,11 +50,10 @@ const Home = () => {
             <p><span>Mission:</span> the entire product portfolio, consulting services of DAMAR AGROTRADE LLC are aimed at increasing the profitability of crop production in the changing climatic conditions of Ukraine. We also set ourselves the task of raising customers' awareness of modern methods of crop production...</p>
           </div>
         </section>
-
         <SectionSwiper classes="home-news" title="News" data={products} totalSlides={12} paginationClass="news-section-pagination" />
+        <SectionSwiper classes="home-sales" title="Sales" data={products} totalSlides={12} buttons paginationClass="sales-section-pagination" />
 
       </div>
-      <SectionSwiper classes="home-sales" title="Sales" data={products} totalSlides={12} buttons paginationClass="sales-section-pagination" />
       <SectionSwiper classes="home-partners" title="Partners" data={partners} totalSlides={6} paginationClass="partners-section-pagination" />
       <Article text={text} title="Seeds" />
     </main>

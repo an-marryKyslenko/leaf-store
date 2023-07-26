@@ -6,7 +6,7 @@ const Title = ({ title, clases, secondLeaf }) => {
 	return (
 		<h2 className={`${clases}__title title`}>
 			<FaLeaf className='leaf' />
-			{title}
+			{title && title.replace(title[0],title[0].toUpperCase())}
 			{secondLeaf && <FaLeaf className='leaf second'/>}
 		</h2>
 	)

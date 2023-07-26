@@ -19,6 +19,10 @@
 	display: flex;
 	justify-content: space-between;
 }
+.filter__input{
+	position: absolute;
+	opacity: 0;
+}
 .filter__name{
 	color: rgba(0, 0, 0, 0.5);
 }

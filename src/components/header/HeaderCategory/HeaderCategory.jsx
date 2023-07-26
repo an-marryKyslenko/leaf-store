@@ -10,7 +10,8 @@ import icon5 from '../../../assets/images/icons/icon-btn-5.svg'
 
 import './HeaderCategory.css'
 import { useGlobalContaxt } from '../../../context'
-import { Link, NavLink, useSearchParams } from 'react-router-dom'
+import { Link,useSearchParams } from 'react-router-dom'
+
 const catalogue = [
 	{ id: 11, icon: icon1, name: 'Seeds' },
 	{ id: 12, icon: icon2, name: 'Plants protecting tools' },

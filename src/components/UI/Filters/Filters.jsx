@@ -1,6 +1,8 @@
 import React from 'react'
 
 import { BsArrowLeft } from 'react-icons/bs'
+import { useSearchParams } from 'react-router-dom'
+import { useGlobalContaxt } from '../../../context'
 
 import { filterFunction, filterSortFunction } from '../../../functions/filterFunction'
 import { FilterBox } from './FilterBox'
@@ -8,18 +10,43 @@ import { FilterBox } from './FilterBox'
 import './Filters.css'
 
 const Filters = ({ data, searchCategory, changeState, showFilter }) => {
+  const { setFilterParams } = useGlobalContaxt()
+  const [searchParams, setSearchParams] = useSearchParams()
   const filterType = filterFunction(data, searchCategory, 'type')
-  const filterProduction = filterFunction(data, searchCategory, 'production')
+  const filterProduction = filterFunction(data, searchCategory, 'company')
   const filterCalture = filterSortFunction(data, searchCategory, 'culture')
-
+  const handleFilterType = (e) => {
+    const el = e.target.value
+    setSearchParams({ type: el, category: searchCategory })
+  }
   return (
     <>
       <div className='filter'>
+        <label htmlFor='product-type-0' className='filter__item'>
+          <input
+            type="radio"
+            id='product-type-0'
+            onClick={(e) => handleFilterType(e)}
+            className="filter__input"
+            value="All"
+            name='product-type'
+          />
+          <span className='filter__name'>All</span>
+          <span className='filter__total'>({data.length})</span>
+        </label>
         {filterType.map((filter, i) => (
-          <div key={i} className='filter__item'>
-            <span className={i === 0 ? "filter__name active" : "filter__name"}>{filter[0]}</span>
+          <label key={i} htmlFor={`product-type-${i+1}`} className='filter__item'>
+            <input
+              type="radio"
+              id={`product-type-${i+1}`}
+              onClick={(e) => handleFilterType(e)}
+              className="filter__input"
+              value={filter[0]}
+              name='product-type'
+            />
+            <span className='filter__name'>{filter[0]}</span>
             <span className='filter__total'>({filter[1]})</span>
-          </div>
+          </label>
         ))}
       </div>
       <div className="catalogue__filter filter filter-more">
@@ -27,7 +54,7 @@ const Filters = ({ data, searchCategory, changeState, showFilter }) => {
           {showFilter && <span onClick={() => changeState(false)}><BsArrowLeft /></span>}
           Filter
         </h3>
-        <FilterBox subtitle="Manufacturer" data={filterProduction} />
+        <FilterBox subtitle="Company" data={filterProduction} />
         {filterCalture.length > 0
           && <FilterBox subtitle="Culture" data={filterCalture} />}
         <div className="filter__box box-price">

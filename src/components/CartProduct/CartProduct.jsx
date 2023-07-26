@@ -19,7 +19,7 @@ const CartProduct = ({ name, price, image, id, path }) => {
 		<Link to={path ? path + '/' + id : id} className='cart'>
 			<div className="cart__container">
 				<div className="cart__img">
-					<img src={image} alt="" />
+					<img src={image} alt={name} />
 				</div>
 				<div className="cart__info">
 					<h5 className="cart__title">{name}</h5>

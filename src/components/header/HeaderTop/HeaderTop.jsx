@@ -14,7 +14,7 @@ const HeaderTop = () => {
 			<div className="header__container container">
 				<nav className='header__menu'>
 					<NavLink to='.' className={({ isActive }) => isActive ? 'header__link active' : 'header__link'}>Home</NavLink>
-					<NavLink to='catalogue?category=seeds' className={({ isActive }) => isActive ? 'header__link active' : 'header__link'}>Catalogue</NavLink>
+					<NavLink to='catalogue' className={({ isActive }) => isActive ? 'header__link active' : 'header__link'}>Catalogue</NavLink>
 					<NavLink to='about' className={({ isActive }) => isActive ? 'header__link active' : 'header__link'}>About</NavLink>
 					<NavLink to='contacts' className={({ isActive }) => isActive ? 'header__link active' : 'header__link'}>Contacts</NavLink>
 				</nav>

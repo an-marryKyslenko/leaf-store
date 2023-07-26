@@ -12,10 +12,10 @@ import './Bastet.css'
 
 const Basket = () => {
 	const {products} = useGlobalContaxt()
-	const { openBasket, setOpenBasket, setOrderList } = useGlobalContaxt()
+	const { setOpenBasket, setOrderList } = useGlobalContaxt()
 	const productId = localStorage.getItem('id')
 	const productItem = products.filter(item => item.id === productId)[0]
-		const { name, id, photo, production, price, total } = productItem
+		const { name, id, image, company, price, total } = productItem
 	
 	const [quantity, setQuantity] = useState(1)
 
@@ -49,10 +49,10 @@ const Basket = () => {
 				<div className="basket__content">
 					<h4 className="basket__product-name">{name}</h4>
 					<div className="basket__img">
-						<img src={photo} alt={name} />
+						<img src={image} alt={name} />
 					</div>
 					<p className="basket__price">${price}</p>
-					<p className="basket__production"><span>Manufacturer:</span>{production}</p>
+					<p className="basket__production"><span>Manufacturer:</span>{company}</p>
 					<div className="basket__quantity quantity">
 						<span className='quantity__title'>Quantity</span>
 						<button onClick={decreaseQuantity} className='quantity__btn'>-</button>

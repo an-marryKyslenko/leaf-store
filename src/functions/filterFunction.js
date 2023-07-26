@@ -1,6 +1,5 @@
 export const filterFunction = (data, category, searchParam) => {
 	return Object.entries(data
-		.filter(item => item.category === category)
 		.reduce((acc, item) => {
 			const type = item[searchParam]
 			const currCount = Object.hasOwn(acc, type) ? acc[type] : 0
