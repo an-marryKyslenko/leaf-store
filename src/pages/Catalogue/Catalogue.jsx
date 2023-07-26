@@ -13,24 +13,25 @@ import Article from '../../components/Article/Article'
 import Loading from '../../components/UI/Loading/Loading'
 
 import './Catalogue.css'
+import { pagesFunction } from '../../functions/pagesFunction'
 
 const Catalogue = () => {
   const { windowWidth, products, setFilterTypes, isLoading } = useGlobalContaxt()
   const [showFilter, setShowFilter] = useState(false)
+  const [activePage, setActivePage] = useState(1)
   const [searchParams, setSearchParams] = useSearchParams()
   const searchCategory = searchParams.get('category') || ''
   const searchType = searchParams.get('type')
- console.log(isLoading);
-  const newProducts = searchType ? products.filter(prod=>prod.type === searchType): products
-  console.log(products);
+  const filterType = filterFunction(products, 'type')
+  const newProducts = searchType ? products.filter(prod => prod.type === searchType) : products
+  const pages = pagesFunction(newProducts, 12);
+
   useEffect(() => {
     setFilterTypes({
       category: searchCategory
     })
-  }, [searchCategory,searchType])
-
-  const totalItem = 12;
-  const filterType = filterFunction(products, 'type')
+    setActivePage(1)
+  }, [searchCategory, searchType])
   return (
     <main className="main catalogue">
       <div className="container">
@@ -75,13 +76,14 @@ const Catalogue = () => {
             <div className="catalogue__products">
               {
                 newProducts
-                .map((product, index) => {
-                  return (
-                    <CartProduct {...product} key={index} />
-                  )
-                })
+                  .filter((item, index) => index >= 12 * (activePage - 1) && index < 12 * activePage)
+                  .map((product, index) => {
+                    return (
+                      <CartProduct {...product} key={index} />
+                    )
+                  })
               }
-              <Pagination data={newProducts} total={totalItem} />
+              <Pagination data={pages} total={12} activePage={activePage} setActivePage={setActivePage} />
             </div>
           }
         </div>

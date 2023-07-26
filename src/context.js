@@ -44,7 +44,7 @@ const ProviderContaxt = ({ children }) => {
 	}
 	useEffect(() => {
 		getProducts()
-	}, [])
+	}, [filterTypes])
 	useEffect(() => {
 		function watch() {
 			setWindowWidth(window.innerWidth)

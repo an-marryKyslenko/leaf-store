@@ -16,8 +16,7 @@ import Loading from '../../components/UI/Loading/Loading'
 
 
 const Home = () => {
-  const { windowWidth, products, isLoading } = useGlobalContaxt()
-  // console.log(products);
+  const { windowWidth, products} = useGlobalContaxt()
   return (
     <main className='main home'>
       <section className="home__fullscreen fullscreen">

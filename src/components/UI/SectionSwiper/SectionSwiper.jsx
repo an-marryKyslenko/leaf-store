@@ -17,7 +17,6 @@ import Loading from '../Loading/Loading';
 
 const SectionSwiper = ({ data, classes, title, totalSlides, buttons, paginationClass }) => {
 	const { isLoading } = useGlobalContaxt()
-	console.log(isLoading);
 	return (
 		<section className={`home__section swiper-section ${classes}`}>
 			<Title clases={classes} title={title} secondLeaf />

@@ -15,6 +15,7 @@ const Filters = ({ data, searchCategory, changeState, showFilter }) => {
   const filterType = filterFunction(data, searchCategory, 'type')
   const filterProduction = filterFunction(data, searchCategory, 'company')
   const filterCalture = filterSortFunction(data, searchCategory, 'culture')
+  const searchType = searchParams.get('type')
   const handleFilterType = (e) => {
     const el = e.target.value
     setSearchParams({ type: el, category: searchCategory })
@@ -27,20 +28,20 @@ const Filters = ({ data, searchCategory, changeState, showFilter }) => {
             type="radio"
             id='product-type-0'
             onClick={(e) => handleFilterType(e)}
-            className="filter__input"
-            value="All"
+            className={searchType === '' ? "filter__input active" : "filter__input"}
+            value=""
             name='product-type'
           />
           <span className='filter__name'>All</span>
           <span className='filter__total'>({data.length})</span>
         </label>
         {filterType.map((filter, i) => (
-          <label key={i} htmlFor={`product-type-${i+1}`} className='filter__item'>
+          <label key={i} htmlFor={`product-type-${i + 1}`} className='filter__item'>
             <input
               type="radio"
-              id={`product-type-${i+1}`}
+              id={`product-type-${i + 1}`}
               onClick={(e) => handleFilterType(e)}
-              className="filter__input"
+              className={searchType === filter[0] ? "filter__input active" : "filter__input"}
               value={filter[0]}
               name='product-type'
             />
