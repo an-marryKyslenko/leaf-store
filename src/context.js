@@ -12,7 +12,12 @@ const ProviderContaxt = ({ children }) => {
 	const [windowWidth, setWindowWidth] = useState(window.innerWidth)
 	const [openBasket, setOpenBasket] = useState(false)
 	const [orderList, setOrderList] = useState([])
-	const [filterTypes, setFilterTypes] = useState({category: ''})
+	const [filterTypes, setFilterTypes] = useState(
+		{category: '',
+		sort:'',
+		company: []
+	})
+	const [chosenCompany,setChosenCompany]= useState([])
 	const [isLoading,setIsLoading] = useState(true)
 	const amount = orderList.reduce((acc, item) => {
 		const p = acc.totalPrice + item.totalPrice
@@ -68,7 +73,9 @@ const ProviderContaxt = ({ children }) => {
 			orderList,
 			setOrderList,
 			amount,
-			isLoading
+			isLoading,
+			chosenCompany,
+			setChosenCompany
 		}}>
 			{children}
 		</MyContaxt.Provider>

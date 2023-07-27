@@ -1,4 +1,6 @@
 import React from 'react'
+import { useEffect } from 'react'
+import { useState } from 'react'
 
 import { BsArrowLeft } from 'react-icons/bs'
 import { useSearchParams } from 'react-router-dom'
@@ -10,7 +12,6 @@ import { FilterBox } from './FilterBox'
 import './Filters.css'
 
 const Filters = ({ data, searchCategory, changeState, showFilter }) => {
-  const { setFilterParams } = useGlobalContaxt()
   const [searchParams, setSearchParams] = useSearchParams()
   const filterType = filterFunction(data, searchCategory, 'type')
   const filterProduction = filterFunction(data, searchCategory, 'company')

@@ -16,22 +16,24 @@ import './Catalogue.css'
 import { pagesFunction } from '../../functions/pagesFunction'
 
 const Catalogue = () => {
-  const { windowWidth, products, setFilterTypes, isLoading } = useGlobalContaxt()
+  const { windowWidth, products, setFilterTypes, isLoading, chosenCompany } = useGlobalContaxt()
   const [showFilter, setShowFilter] = useState(false)
   const [activePage, setActivePage] = useState(1)
   const [searchParams, setSearchParams] = useSearchParams()
   const searchCategory = searchParams.get('category') || ''
   const searchType = searchParams.get('type')
   const filterType = filterFunction(products, 'type')
-  const newProducts = searchType ? products.filter(prod => prod.type === searchType) : products
-  const pages = pagesFunction(newProducts, 12);
 
+  const newProducts = searchType ? products.filter(prod => prod.type === searchType) : products;
+  const newProductsArr = chosenCompany.length > 0 ? newProducts.filter(product => chosenCompany.includes(product.company)) : newProducts
+  const pages = pagesFunction(newProductsArr, 12);
   useEffect(() => {
     setFilterTypes({
       category: searchCategory
     })
     setActivePage(1)
   }, [searchCategory, searchType])
+
   return (
     <main className="main catalogue">
       <div className="container">
@@ -55,7 +57,7 @@ const Catalogue = () => {
               </>
               :
               <>
-                <div className="catalogue__total-products">Show {products.length} products</div>
+                <div className="catalogue__total-products">Show {newProductsArr.length} products</div>
                 <Select clases="catalogue" />
               </>
             }
@@ -75,7 +77,7 @@ const Catalogue = () => {
             :
             <div className="catalogue__products">
               {
-                newProducts
+                newProductsArr
                   .filter((item, index) => index >= 12 * (activePage - 1) && index < 12 * activePage)
                   .map((product, index) => {
                     return (
