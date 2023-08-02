@@ -37,7 +37,14 @@
 	align-self: start;
 }
 
-
+.catalogue__not-found{
+	flex: 0 1 70%;
+	font-weight: 700;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 25px;
+}
 
 
 

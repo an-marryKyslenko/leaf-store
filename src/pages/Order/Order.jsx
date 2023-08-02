@@ -10,10 +10,14 @@ import Title from '../../components/UI/Title/Title'
 import './Order.css'
 
 const Order = () => {
-  const { orderList, amount, products, isLoading } = useGlobalContaxt()
+  const { orderList, amount, products, isLoading, setOrderList } = useGlobalContaxt()
   const [isOrdered, setIsOrdered] = useState(false)
   const listOrder = products.filter(item => orderList.some(product => product.id === item.id))
 
+  const handleButton = () => {
+    setIsOrdered(true)
+    setOrderList([])
+  }
   return (
     <main className='main order'>
       {!isOrdered
@@ -90,7 +94,7 @@ const Order = () => {
                   <span>$ {amount.totalPrice}</span>
                 </div>
               </div>
-              <button onClick={() => setIsOrdered(true)} className='basket-order__btn orange-btn'>Confirm order</button>
+              <button onClick={handleButton} className='basket-order__btn orange-btn'>Confirm order</button>
             </div>
           </form>
         </div>

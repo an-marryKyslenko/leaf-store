@@ -15,7 +15,7 @@ import BurgerMenu from '../burgerMenu/BurgerMenu'
 import { useGlobalContaxt } from '../../context'
 
 const Header = () => {
-  const {amount} = useGlobalContaxt()
+  const { amount } = useGlobalContaxt()
   const [isHome, setIsHome] = useState(false)
   const { pathname } = useLocation()
 

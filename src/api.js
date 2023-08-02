@@ -1,46 +1,38 @@
+import axios from "axios"
 
-import { user } from './data'
+const client = axios.create({
+	baseURL: 'https://leaf-store-api-1e132ca5313e.herokuapp.com/api/v1',
+	headers: { 'X-Custom-Header': 'foobar' }
+})
 
-// const url = 'https://leaf-store-api-1e132ca5313e.herokuapp.com/api/v1'
 
-
-// export async function getProducts(id,params) {
-// 	try {
-// 		const res = await fetch(`${url}/products?`+ new URLSearchParams(params))
-// 		const data = await res.json()
-// 		const { products } = data
-// 		if (products) {
-// 			const newProducts = products.map(item => {
-// 				const { _id, quantity, img } = item
-// 				// decode base64
-// 				const base64 = btoa(new Uint8Array(img.data.data)
-// 					.reduce(function (data, byte) {
-// 						return data + String.fromCharCode(byte);
-// 					}, "")
-// 				)
-// 				const newImg = `data:image/png;base64,${base64}`
-
-// 				return { ...item, id: _id, total: quantity, image: newImg }
-// 			})
-// 			const dataProducts = id ? newProducts.filter(item => item.id === id)[0] : newProducts
-// 			return dataProducts
-// 		}
-// 		return []
-// 	} catch (error) {
-// 		console.log(error.message)
-// 	}
-
-// }
-export async function getUser(creds) {
-	const data = (user.email === creds.email) && (user.password === creds.password) ? user : null;
-	if (!data) {
-		throw {
-			message: "No user with those credintials found!",
-			statusText: "Bed request",
-			status: "400"
+export async function getProducts(params) {
+	try {
+		const res = await client.get('/products', {
+			params: params
+		})
+		const { data: { products } } = res
+		if (products) {
+			const newProducts = products.map(item => {
+				const { _id, quantity } = item
+				return { ...item, id: _id, total: quantity }
+			})
+			return newProducts
+		} else {
+			return []
 		}
+	} catch (error) {
+		console.log(error.message)
 	}
 }
 
-export async function setUser(creds) {
+export async function getUser(path, obj) {
+	try {
+		const newUser = await client.post(`/auth${path}`, obj)
+		const { data: { user, token } } = newUser
+		console.log('Success!!!',user.name);
+		return user
+	} catch (error) {
+		console.log(error);
+	}
 }

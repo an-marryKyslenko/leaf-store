@@ -9,7 +9,6 @@ const Select = ({ clases, data }) => {
 	const { setFilterTypes } = useGlobalContaxt()
 	let title = data ? data[0][0] : 'Select by:'
 	const [category, setCategory] = useState(title)
-
 	const handleSelect = (e) => {
 		let value = e.target.value
 		setCategory(() => value.includes('price') ? 'Select by price' : 'Select by name')

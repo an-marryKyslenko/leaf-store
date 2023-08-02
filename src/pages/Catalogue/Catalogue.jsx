@@ -22,18 +22,14 @@ const Catalogue = () => {
   const [searchParams, setSearchParams] = useSearchParams()
   const searchCategory = searchParams.get('category') || ''
   const searchType = searchParams.get('type')
-  const filterType = filterFunction(products, 'type')
-
+  const filterType = filterFunction(products, searchCategory, 'type')
   const newProducts = searchType ? products.filter(prod => prod.type === searchType) : products;
   const newProductsArr = chosenCompany.length > 0 ? newProducts.filter(product => chosenCompany.includes(product.company)) : newProducts
   const pages = pagesFunction(newProductsArr, 12);
   useEffect(() => {
-    setFilterTypes({
-      category: searchCategory
-    })
+    setFilterTypes({ category: searchCategory })
     setActivePage(1)
   }, [searchCategory, searchType])
-
   return (
     <main className="main catalogue">
       <div className="container">
@@ -76,14 +72,21 @@ const Catalogue = () => {
             <Loading />
             :
             <div className="catalogue__products">
-              {
-                newProductsArr
-                  .filter((item, index) => index >= 12 * (activePage - 1) && index < 12 * activePage)
-                  .map((product, index) => {
-                    return (
-                      <CartProduct {...product} key={index} />
-                    )
-                  })
+              {newProducts.length > 0
+                ?
+                <>
+                  {
+                    newProductsArr
+                      .filter((item, index) => index >= 12 * (activePage - 1) && index < 12 * activePage)
+                      .map((product, index) => {
+                        return (
+                          <CartProduct {...product} key={index} />
+                        )
+                      })
+                  }
+                </>
+                :
+                <h2 className='catalogue__not-found'>No any products</h2>
               }
               <Pagination data={pages} total={12} activePage={activePage} setActivePage={setActivePage} />
             </div>

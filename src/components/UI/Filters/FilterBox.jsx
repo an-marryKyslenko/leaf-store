@@ -13,7 +13,6 @@ export const FilterBox = ({ data, subtitle}) => {
 			setChosenCompany(prev=>([...prev,value]))
 		}
 	}
-	console.log(chosenCompany);
 	return (
 		<div className="filter__box">
 			<h5 className="filter__subtitle">{subtitle}</h5>
