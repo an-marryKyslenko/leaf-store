@@ -35,8 +35,14 @@
 	top: 2px;
 
 }
+.header__enter-link:hover span{
+	color: white;
+}
 .header__enter-link{
 	position: relative;
+}
+.header__enter-link:hover{
+	color: #84BE51;
 }
 .header__enter-link:first-child:after{
 	content: '';

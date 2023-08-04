@@ -1,0 +1,44 @@
+.per-data{
+
+}
+.per-data__form{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	background-color: #fff;
+	padding: 30px;
+	border-radius: 20px;
+	gap: 20px;
+}
+.per-data__field{
+	flex: 0 1 calc(50% - 10px);
+	display: flex;
+	flex-direction: column;
+	color: #484848;
+	position: relative;
+	gap: 10px;
+}
+.per-data__field.big{
+	flex: 0 1 100%;
+}
+.per-data__field input{
+	border-radius: 90px;
+	border: 1px solid rgba(0, 0, 0, 0.20);
+	background: #FFF;
+	padding: 10px 20px;
+}
+.per-data__icon{
+position: absolute;
+right: 20px;
+bottom: 10px;
+opacity: 0.3;
+}
+
+.per-data__button{
+	background-color: #E74E13;
+	color: #FFF;
+	padding: 20px 75px;
+	border-radius: 90px;
+	letter-spacing: 1.5px;
+	font-weight: 700;
+}

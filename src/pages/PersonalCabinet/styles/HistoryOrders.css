@@ -1,0 +1,55 @@
+.history-orders__content{
+	background-color: #fff;
+	border-radius: 20px;
+	
+	}
+	.history-orders__item{
+		display: grid;
+		grid-template-columns: 110px 1fr 1fr 1fr; 
+		grid-template-rows: 1fr 1fr; 
+		gap: 0px 20px; 
+		grid-template-areas: 
+		"img name name price"
+		"img details details price"; 
+		padding: 20px;
+		align-items: center;
+	}
+	.history-orders__item:not(:last-child){
+		border-bottom: 1px solid rgba(0, 0, 0, 0.10);
+	}
+	.history-orders__img{
+		grid-area: img;
+		border-radius: 20px;
+		background: #FFF;
+		width: 110px;
+		height: 75px;
+		box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.15);
+	}
+	.history-orders__name{
+		grid-area: name;
+		font-size: 18px;
+		font-weight: 700;
+	}
+	.history-orders__price{
+		grid-area: price;
+		color: #84BE51;
+		font-size: 25px;
+		font-weight: 700;
+		justify-self: center;
+	}
+	.history-orders__delete:hover{
+		color: #8C3213;
+		opacity: 1;
+	}
+	.history-orders__details{
+		grid-area: details;
+		display: flex;
+		gap:25px;
+		align-items: center;
+	}
+	.history-orders__date{
+		opacity: 0.2;
+	}
+	.history-order__title{
+		margin: 30px 0;
+	}
