@@ -13,6 +13,8 @@
 		"img details details price"; 
 		padding: 20px;
 		align-items: center;
+		z-index: 2;
+		position: relative;
 	}
 	.history-orders__item:not(:last-child){
 		border-bottom: 1px solid rgba(0, 0, 0, 0.10);
@@ -24,6 +26,11 @@
 		width: 110px;
 		height: 75px;
 		box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.15);
+	}
+	.history-orders__img img{
+		min-width: 100%;
+		max-height: 100%;
+		object-fit: contain;
 	}
 	.history-orders__name{
 		grid-area: name;
@@ -52,4 +59,28 @@
 	}
 	.history-order__title{
 		margin: 30px 0;
+	}
+
+	@media (max-width: 630px){
+		.history-orders__item{
+			grid-template-columns: 80px 1fr ; 
+			grid-template-rows: auto 1fr 40px; 
+			grid-template-areas: 
+		"img name "
+		"img details "
+		"img price";
+		gap: 10px 20px;
+		padding: 10px;
+		}
+		.history-orders__img{
+			width: 80px;
+		}
+		.history-orders__details{
+		flex-direction: column;
+		align-items: start;
+		gap: 10px;
+		}
+		.history-orders__price{
+			justify-self: start;
+		}
 	}

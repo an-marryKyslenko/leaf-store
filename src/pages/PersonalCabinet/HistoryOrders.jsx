@@ -1,8 +1,12 @@
 import React from 'react'
 import './styles/HistoryOrders.css'
+
+import photo1 from '../../assets/images/item-photo-2.png'
+import photo2 from '../../assets/images/item-photo-3.png'
+
 const obj = [
-  { name: 'dfadff', photo: "dadf", quantity: 1, date: '30.03.2021', price: 20, status: "Delivered" },
-  { name: 'dfadff', photo: "dadf", quantity: 1, date: '30.03.2021', price: 20, status: "Delivered" }
+  { name: 'dfadff', photo: photo1, quantity: 1, date: '30.03.2021', price: 20, status: "Delivered" },
+  { name: 'dfadff', photo: photo2, quantity: 1, date: '30.03.2021', price: 20, status: "Delivered" }
 ]
 
 const HistoryOrders = () => {

@@ -135,6 +135,21 @@ textarea{
 	font-weight: 700;
 }
 
+@media (max-width: 420px){
+	.main__paths._changed{
+		flex-direction: column;
+		align-items: center;
+		gap:15px;
+		margin-bottom: 25px;
+	}
+	.main__paths._changed .main__path:not(:last-child)::after{
+		top: 25px;
+		left: 50%;
+		/* /* transform: translateX(-50%); */
+	
+	}
+}
+
 /* logo */
 
 .logo{
@@ -224,5 +239,6 @@ textarea{
 		font-size: 8px;
 		letter-spacing: 0.5px;
 	}
+	
 }
 

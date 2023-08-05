@@ -3,9 +3,11 @@ import {CgClose} from 'react-icons/cg'
 import './styles/CurrentOrders.css'
 import { useState } from 'react'
 
+import photo1 from '../../assets/images/item-photo-2.png'
+import photo2 from '../../assets/images/item-photo-3.png'
 const obj = [
-  { name: 'dfadff', photo: "dadf", quantity: 1, date: '30.03.2021', price: 20, status: "Delivered" },
-  { name: 'dfadff', photo: "dadf", quantity: 1, date: '30.03.2021', price: 20, status: "Delivered" }
+  { name: 'adfadfdfa sdfasdfasf', photo: photo1, quantity: 1, date: '30.03.2021', price: 20, status: "Delivered" },
+  { name: 'dfadff', photo: photo2, quantity: 1, date: '30.03.2021', price: 20, status: "Delivered" }
 ]
 const CurrentOrder = () => {
   const [items,setItems]=useState(obj)

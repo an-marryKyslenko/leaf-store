@@ -2,6 +2,7 @@
 background-color: #fff;
 border-radius: 20px;
 
+
 }
 .cur-orders__item{
 	display: grid;
@@ -13,6 +14,8 @@ border-radius: 20px;
 	"img details details details price delete"; 
 	padding: 20px;
 	align-items: center;
+	z-index: 2;
+	position: relative;
 }
 .cur-orders__item:not(:last-child){
 	border-bottom: 1px solid rgba(0, 0, 0, 0.10);
@@ -24,6 +27,11 @@ border-radius: 20px;
 	width: 110px;
 	height: 75px;
 	box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.15);
+}
+.cur-orders__img img{
+	min-width: 100%;
+	max-height: 100%;
+	object-fit: contain;
 }
 .cur-orders__name{
 	grid-area: name;
@@ -64,4 +72,28 @@ border-radius: 20px;
 }
 .cur-order__title{
 	margin: 30px 0;
+}
+
+@media (max-width: 630px){
+	.cur-orders__item{
+		grid-template-columns: 80px 1fr auto; 
+		grid-template-rows: auto 1fr 40px; 
+		grid-template-areas: 
+	"img name delete"
+	"img details delete"
+	"img price delete";
+	gap: 10px;
+	padding: 10px;
+	}
+	.cur-orders__img{
+		width: 80px;
+	}
+	.cur-orders__details{
+	flex-direction: column;
+	align-items: start;
+	gap: 10px;
+	}
+	.cur-orders__price{
+		justify-self: start;
+	}
 }

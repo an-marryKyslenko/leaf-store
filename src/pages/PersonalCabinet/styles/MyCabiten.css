@@ -21,8 +21,22 @@
 	font-weight: 700;
 	text-transform: uppercase;
 	color: #fff;
+	text-align: center;
 }
 .my-cabinet__link span{
 	font-size: 50px;
 	color: #84C551;
+}
+
+@media (max-width: 450px){
+	.my-cabinet__item{
+		padding: 5px;
+
+	}
+	.my-cabinet__content{
+		padding: 0;
+	}
+	.my-cabinet__link span{
+		font-size: 35px;
+	}
 }
