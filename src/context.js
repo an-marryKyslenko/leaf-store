@@ -1,12 +1,11 @@
 import React from "react";
 import { useContext, useState, useEffect, createContext } from "react";
-import { getProducts} from "./api";
+import { getProducts } from "./api";
 
 const MyContaxt = createContext()
 
 const ProviderContaxt = ({ children }) => {
 	const [products, setProducts] = useState([])
-	const [userInfo,setUserInfo]=useState({})
 	const [openBurger, setOpenBurger] = useState(false)
 	const [category, setCategory] = useState('Choose category')
 	const [windowWidth, setWindowWidth] = useState(window.innerWidth)
@@ -64,9 +63,7 @@ const ProviderContaxt = ({ children }) => {
 			isLoading,
 			chosenCompany,
 			setChosenCompany,
-			userInfo,
-			setUserInfo
-	
+
 		}}>
 			{children}
 		</MyContaxt.Provider>

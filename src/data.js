@@ -13,12 +13,5 @@ export const text = [
 	'You can also find in our catalog flower seeds: annual (petunia, snapdragon, calendula, etc.), biennial (viola, primrose, mallow), perennial (iberis, anemone, hibiscus, delphinium, freesia), bulbs (tulips , lily, iris, daffodils), room plants (gerbera, begonia, cactus, mimosa, passion flower). Of course, this is far from the entire list - every hostess will find her favorite flower here.',
 	]
 
-export const user ={
-	id:123,
-	email: 'kyky@mail.ua', 
-	password: 'ky123', 
-	name: 'Anna',
-	token: 'Enjoy your pizza,here\'s your tokens',
-	
-}
+
 export const partners = [part1,part2,part3,part4,part5,part6]

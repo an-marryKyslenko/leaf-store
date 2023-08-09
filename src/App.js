@@ -12,14 +12,14 @@ import NotFound from './pages/NotFound'
 import Error from './components/Error/Error'
 
 import './App.css';
-import Register from './pages/Auth/Register'
+import Register,{action as actionRegister} from './pages/Auth/Register'
 import Login,{action as actionLogin}from './pages/Auth/Login'
 import PersonalLayout from './pages/PersonalCabinet/PersonalLayout'
-import CurrentOrder from './pages/PersonalCabinet/CurrentOrder'
-import PersonalData from './pages/PersonalCabinet/PersonalData'
+import PersonalData,{action as actionPersonalData} from './pages/PersonalCabinet/PersonalData'
 import ChangePassword from './pages/PersonalCabinet/ChangePassword'
 import MyCabinet from './pages/PersonalCabinet/MyCabinet'
 import HistoryOrders from './pages/PersonalCabinet/HistoryOrders'
+import DeleteUser,{action as actionDeleteUser} from './pages/PersonalCabinet/DeleteUser'
 
 function App() {
 	const router = createBrowserRouter(createRoutesFromElements(
@@ -48,6 +48,7 @@ function App() {
 				path='register'
 				element={<Register/>}
 				errorElement={<Error />}
+				action={actionRegister}
 			/>
 			<Route
 				path='login'
@@ -61,8 +62,8 @@ function App() {
 				errorElement={<Error />}
 			>
 				<Route index element={<MyCabinet/>} errorElement={<Error/>}/>
-				<Route path='current-orders' element={<CurrentOrder/>}/>
-				<Route path='personal-data' element={<PersonalData/>} errorElement={<Error/>}/>
+				<Route path='delete-user' action={actionDeleteUser} element={<DeleteUser/>} errorElement={<Error/>}/>
+				<Route path='personal-data' action={actionPersonalData} element={<PersonalData/>} errorElement={<Error/>}/>
 				<Route path='change-password' element={<ChangePassword/>} errorElement={<Error/>}/>
 				<Route path='history-orders' element={<HistoryOrders/>} errorElement={<Error/>}/>
 			</Route>

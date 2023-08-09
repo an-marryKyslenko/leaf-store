@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link, useActionData, useNavigation, Form, redirect } from 'react-router-dom'
+import { Link, useActionData, useNavigation, Form, redirect, useNavigate } from 'react-router-dom'
 
 import Input from '../../components/UI/Inputs/Input'
 import Title from '../../components/UI/Title/Title'
@@ -14,7 +14,7 @@ export async function action({ request }) {
 	try {
 		const user = await getUser('/login', { email, password })
 		localStorage.setItem('loggedin', true)
-		return redirect('/catalogue')
+		return redirect("/catalogue")
 	} catch (error) {
 		return error.message
 	}
@@ -24,7 +24,7 @@ const Login = () => {
 	const status = navigation.state
 	const title = status === 'submitting' ? 'Loging in...' : 'Log in'
 
-	const errorMessage = useActionData()
+	const errorMessage= useActionData()
 
 	return (
 		<main className='main auth'>

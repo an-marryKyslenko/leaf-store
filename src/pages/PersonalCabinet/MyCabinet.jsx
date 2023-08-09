@@ -10,12 +10,6 @@ const MyCabinet = () => {
 		<div className='cabinet__information my-cabinet'>
 			<ul className="my-cabinet__content">
 				<li className='my-cabinet__item'>
-					<Link to="current-orders" className="my-cabinet__link">
-						<span><LuClipboardList/></span>
-						Current orders
-					</Link>
-				</li>
-				<li className='my-cabinet__item'>
 					<Link to="personal-data" className="my-cabinet__link">
 						<span><BsDatabase/></span>
 						Personal data
@@ -31,6 +25,12 @@ const MyCabinet = () => {
 					<Link to="history-orders" className="my-cabinet__link">
 						<span><RiFolderHistoryLine/></span>
 						History of orders
+					</Link>
+				</li>
+				<li className='my-cabinet__item'>
+					<Link to="delete-user" className="my-cabinet__link">
+						<span><LuClipboardList/></span>
+						Delete user
 					</Link>
 				</li>
 			</ul>

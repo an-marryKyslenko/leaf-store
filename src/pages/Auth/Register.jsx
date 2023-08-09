@@ -1,6 +1,7 @@
 import React from 'react'
-import { Link, useActionData, useNavigation, redirect, Form } from 'react-router-dom'
+import { Link, useActionData, useNavigation, Form, useNavigate, redirect } from 'react-router-dom'
 
+import { useGlobalContaxt } from '../../context'
 import Input from '../../components/UI/Inputs/Input'
 import Title from '../../components/UI/Title/Title'
 
@@ -8,6 +9,7 @@ import { GiCheckMark } from 'react-icons/gi'
 
 import './Auth.css'
 import { getUser } from '../../api'
+import { useEffect } from 'react'
 
 export async function action({ request }) {
 	const formData = await request.formData()
@@ -22,7 +24,7 @@ export async function action({ request }) {
 	try {
 		const user = await getUser('/register', { name, phone, email, password })
 		localStorage.setItem('loggedin', true)
-		return redirect('/catalogue')
+		return redirect("/catalogue")
 	} catch (error) {
 		return error.message
 	}
@@ -33,6 +35,7 @@ const Register = () => {
 	const status = navigation.state
 	const title = status === 'submitting' ? 'Registering ...' : 'Registration'
 	const errorMessage = useActionData()
+
 	return (
 		<main className='main auth'>
 			<div className="container">

@@ -10,7 +10,8 @@ import { useGlobalContaxt } from '../../../context'
 const HeaderTop = () => {
 	const { openBurger, setOpenBurger } = useGlobalContaxt()
 	const isAuth = localStorage.getItem('loggedin')
-	const removeAuth = ()=>localStorage.removeItem('loggedin')
+	const removeAuth = ()=>localStorage.clear()
+	const userName = JSON.parse(localStorage.getItem("userData")) || ''
 	return (
 		<div className="header__top">
 			<div className="header__container container">
@@ -24,6 +25,7 @@ const HeaderTop = () => {
 				{isAuth
 					?
 					<>
+					<h4>{`Hello, ${userName.name}`}</h4>
 					<Link to='personal-cabinet' className='header__enter-link'><BsPersonCircle/></Link>
 					<Link to='.' onClick={removeAuth} className='header__enter-link'><RxEnter/></Link>
 					</>

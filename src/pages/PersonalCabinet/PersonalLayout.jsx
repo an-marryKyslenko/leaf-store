@@ -14,10 +14,10 @@ import { useState } from 'react'
 
 const submenu = [
 	{ path: '.', title: 'My cabinet', icon: (<BsPersonCircle />), end: true },
-	{ path: 'current-orders', title: 'Current orders', icon: (<LuClipboardList />), end: false },
 	{ path: 'personal-data', title: 'Personal data', icon: (<BsDatabase />), end: false },
 	{ path: 'change-password', title: 'Change password', icon: (<RiLockPasswordLine />), end: false },
 	{ path: 'history-orders', title: 'History of orders', icon: (<RiFolderHistoryLine />), end: false },
+	{ path: 'delete-user', title: 'Delete user', icon: (<LuClipboardList />), end: false },
 
 ]
 const PersonalLayout = () => {
