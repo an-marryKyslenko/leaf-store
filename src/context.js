@@ -15,7 +15,8 @@ const ProviderContaxt = ({ children }) => {
 		category: '',
 		sort: '',
 		company: [],
-		price: ''
+		price: '',
+		name: ''
 	})
 	const [chosenCompany, setChosenCompany] = useState([])
 	const [isLoading, setIsLoading] = useState(true)
