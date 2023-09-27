@@ -19,8 +19,11 @@
 + Corn
 
 ## Demonstrated screens
+> Search field 
 ![SEARCH FIELD](./src/assets/screens/Screenshot_1.png "SEARCH FIELD")
+> Filter
 ![SEARCH FIELD](./src/assets/screens/Screenshot_2.png "Filter")
+> Sort by
 ![SEARCH FIELD](./src/assets/screens/Screenshot_3.png "Sort by")
 
 ## TODO 
