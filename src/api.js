@@ -1,7 +1,8 @@
 import axios from "axios"
+import { BASE_API_URL } from "./const"
 
 const client = axios.create({
-	baseURL: 'https://leaf-store-api-1e132ca5313e.herokuapp.com/api/v1',
+	baseURL: BASE_API_URL,
 	headers: { 'X-Custom-Header': 'foobar' }
 })
 
