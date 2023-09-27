@@ -1,6 +1,8 @@
 
 # Project Leaf Store
-> this is my demonstrante project.
+> In this project I practice with ReactJs, Express and MongoDB.
+> It must be real web site with products list , filter, basjet and authorizatin. 
+> All changes have saved in MongoDB.
 
 ## ** DEPLOY in VERCEL**
 [Link to Leaf store](https://leaf-store.vercel.app/ "Link to Leaf store")
@@ -18,7 +20,8 @@
 + Hulmet
 + Corn
 
-## Demonstrated screens
+## Demonstration screens
+
 > Search field 
 
 <div style="width: 150px; height: 200px">
