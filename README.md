@@ -21,17 +21,20 @@
 ## Demonstrated screens
 > Search field 
 
-<div style="width: 300px, height: 300px">
+<div style="width: 150px, height: 200px">
 	<img stype="max-width: 100%" src="./src/assets/screens/Screenshot_1.png" alt="search field"/>
 </div>
 
 > Filter
 
-![SEARCH FIELD](./src/assets/screens/Screenshot_2.png "Filter")
-
+<div style="width: 150px, height: 200px">
+	<img stype="max-width: 100%" src="./src/assets/screens/Screenshot_2.png" alt="search field"/>
+</div>
 > Sort by
 
-![SEARCH FIELD](./src/assets/screens/Screenshot_3.png "Sort by")
+<div style="width: 150px, height: 200px">
+	<img stype="max-width: 100%" src="./src/assets/screens/Screenshot_3.png" alt="search field"/>
+</div>
 
 ## TODO 
 1. Auth
