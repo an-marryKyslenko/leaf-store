@@ -20,10 +20,17 @@
 
 ## Demonstrated screens
 > Search field 
-![SEARCH FIELD](./src/assets/screens/Screenshot_1.png "SEARCH FIELD")
+
+<div style="width: 300px, height: 300px">
+	<img stype="max-width: 100%" src="./src/assets/screens/Screenshot_1.png" alt="search field"/>
+</div>
+
 > Filter
+
 ![SEARCH FIELD](./src/assets/screens/Screenshot_2.png "Filter")
+
 > Sort by
+
 ![SEARCH FIELD](./src/assets/screens/Screenshot_3.png "Sort by")
 
 ## TODO 
