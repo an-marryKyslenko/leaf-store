@@ -1,19 +1,26 @@
 import React, { useState } from 'react'
-
 import { IoIosArrowDown } from 'react-icons/io'
-import { useGlobalContaxt } from '../../../context'
+import { useSearchParams } from 'react-router-dom'
 
 import './Select.css'
 const Select = ({ clases, data }) => {
 	const [isOpenSelect, setIsOpenSelect] = useState(false)
-	const { setFilterTypes } = useGlobalContaxt()
-	let title = data ? data[0][0] : 'Select by:'
+	const [searchParams, setSearchParams] = useSearchParams()
+
+	let title = data ? data[0] : 'Select by:'
 	const [category, setCategory] = useState(title)
+
 	const handleSelect = (e) => {
 		let value = e.target.value
-		setCategory(() => value.includes('price') ? 'Select by price' : 'Select by name')
-		console.log(value.includes('name'));
-		setFilterTypes(prevFilterType => ({ ...prevFilterType, sort: value }))
+		let type = e.target.innerHTML
+		if (value) {
+			setCategory(`Select by ${value.replace('-', '')}`)
+		}
+		if (type) {
+			setCategory(type)
+			setSearchParams({type})
+		}
+		// (prevFilterType => ({ ...prevFilterType, sort: value }))
 		if (isOpenSelect) {
 			setIsOpenSelect(false)
 		}
@@ -29,9 +36,8 @@ const Select = ({ clases, data }) => {
 					?
 					<div className="select__list">
 						{data.map((item, index) => (
-							<div onClick={(e) => handleSelect(e)} key={index} className="select__option filter__item">
-								<span className="filter__name">{item[0]}</span>
-								<span className='filter__total'>({item[1]})</span>
+							<div onClick={(e) => handleSelect(e)} key={index} className="select__option filter__item filter__name">
+								{item}
 							</div>
 						))}
 					</div>

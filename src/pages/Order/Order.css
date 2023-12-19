@@ -101,7 +101,7 @@
 /* thanks for order*/
 
 .ordered{
-	background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),url('../../assets/images/section-fon.png') bottom center/ cover no-repeat;
+	background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),url('../../assets/images/section-fon.jpg') bottom center/ cover no-repeat;
 	height: calc(100vh - 225px);
 	position: relative;
 	display: flex;

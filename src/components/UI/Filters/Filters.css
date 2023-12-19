@@ -17,7 +17,8 @@
 }
 .filter__item{
 	display: flex;
-	justify-content: space-between;
+	gap: 10px;
+	cursor: pointer;
 }
 
 .filter__input{
@@ -27,7 +28,12 @@
 .filter__name{
 	color: rgba(0, 0, 0, 0.5);
 }
-.filter__input.active + .filter__name{
+.filter__item.active .filter__name{
+	font-weight: 700;
+	color: #84C551;
+	opacity: 1;
+}
+.filter__item:hover .filter__name{
 	font-weight: 700;
 	color: #84C551;
 	opacity: 1;
@@ -61,6 +67,7 @@
 	flex: 0 1 calc(50% - 20px);
 	display: flex;
 	flex-direction: column;
+	transition: all 0.4s;
 }
 .box-price .filter__name input{
 	border: 1px solid #CCCCCC;

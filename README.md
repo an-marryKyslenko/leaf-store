@@ -1,7 +1,7 @@
 
 # Project Leaf Store
 > In this project I practice with ReactJs, Express and MongoDB.
-> It must be real web site with products list , filter, basjet and authorizatin. 
+> It must be real web site with products list , filter, bascet and authorizatin. 
 > All changes have saved in MongoDB.
 
 ## ** DEPLOY in VERCEL**

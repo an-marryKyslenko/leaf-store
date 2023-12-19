@@ -8,9 +8,11 @@ import OrderProduct from '../../components/UI/OrderProduct/OrderProduct'
 import Title from '../../components/UI/Title/Title'
 
 import './Order.css'
+import { useProducts } from '../../hooks/useProducts'
 
 const Order = () => {
-  const { orderList, amount, products, isLoading, setOrderList } = useGlobalContaxt()
+  const { orderList, amount, setOrderList } = useGlobalContaxt()
+  const {products,isLoading} = useProducts()
   const [isOrdered, setIsOrdered] = useState(false)
   const listOrder = products.filter(item => orderList.some(product => product.id === item.id))
 

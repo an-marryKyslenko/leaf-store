@@ -23,7 +23,7 @@
 	filter: blur(3rem);
 }
 .fullscreen__fon-image{
-	background: linear-gradient(255.06deg, #FCFDFA 8.87%, rgba(255, 255, 255, 0) 85.66%), linear-gradient(181.56deg, #FEFDF4 1.32%, rgba(255, 255, 255, 0) 162.39%), url('../../assets/images/main-fon.jfif') 0 50% /cover no-repeat;
+	background: linear-gradient(255.06deg, #FCFDFA 8.87%, rgba(255, 255, 255, 0) 85.66%), linear-gradient(181.56deg, #FEFDF4 1.32%, rgba(255, 255, 255, 0) 162.39%), url('../../assets/images/main-fon.jpg') 0 50% /cover no-repeat;
 	position: absolute;
 	top: 0;
 	left: -20%;

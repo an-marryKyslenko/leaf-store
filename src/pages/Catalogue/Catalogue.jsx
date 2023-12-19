@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from 'react'
 import { useSearchParams } from 'react-router-dom'
-import { useGlobalContaxt } from '../../context'
-import { filterFunction } from '../../functions/filterFunction'
 import { text } from '../../data'
 
 import CartProduct from '../../components/CartProduct/CartProduct'
@@ -14,32 +12,34 @@ import Loading from '../../components/UI/Loading/Loading'
 
 import './Catalogue.css'
 import { pagesFunction } from '../../functions/pagesFunction'
+import { FILTER } from '../../const'
+import { useProducts } from '../../hooks/useProducts'
+import { useGlobalContaxt } from '../../context'
 
 const Catalogue = () => {
-  const { windowWidth, products, setFilterTypes, isLoading, chosenCompany } = useGlobalContaxt()
+  const {products,mainCategory, isLoading} = useGlobalContaxt()
+  const [searchParams] = useSearchParams();
+  // const [category, setCategory] = useState(searchParams.get('category') || 'seeds');
+  // const [type, setType] = useState(searchParams.get('type') || '')
+
+  // const { products, isLoading } = useProducts({ category, type })
+
+  const windowWidth = window.innerWidth
   const [showFilter, setShowFilter] = useState(false)
   const [activePage, setActivePage] = useState(1)
-  const [searchParams, setSearchParams] = useSearchParams()
-  const searchCategory = searchParams.get('category') || ''
-  const searchType = searchParams.get('type')
-  const filterType = filterFunction(products, searchCategory, 'type')
-  const newProducts = searchType ? products.filter(prod => prod.type === searchType) : products;
-  const newProductsArr = chosenCompany.length > 0 ? newProducts.filter(product => chosenCompany.includes(product.company)) : newProducts
-  const pages = pagesFunction(newProductsArr, 12);
-  useEffect(() => {
-    setFilterTypes({ category: searchCategory })
-    setActivePage(1)
-  }, [searchCategory, searchType])
+  const pages = pagesFunction(products, 12);
+  const filterCategory = FILTER.find(item => item.category === mainCategory)
+  console.log('hello');
   return (
     <main className="main catalogue">
       <div className="container">
         <div className="main__paths">
           <p className="main__path">Home</p>
           <p className="main__path">Catalogue</p>
-          {searchParams.size > 0 && <p className="main__path">{searchCategory}</p>}
+          {searchParams.size > 0 && <p className="main__path">{mainCategory}</p>}
         </div>
         {/* title component */}
-        <Title title={searchCategory ? searchCategory : "Catologue"} clases="catalogue" secondLeaf />
+        <Title title={mainCategory ? mainCategory : "Catologue"} clases="catalogue" secondLeaf />
 
         <div className="catalogue__content">
           <div className="catalogue__content-top">
@@ -48,12 +48,12 @@ const Catalogue = () => {
               <>
                 <button onClick={() => setShowFilter(!showFilter)} className='filters__btn'>Filter</button>
                 <Select clases="catalogue" />
-                <Select clases="filters" data={filterType} />
+                <Select clases="filters" data={filterCategory.type} />
                 <div style={{ textAlign: 'center' }} className="catalogue__total-products">Show {products.length} products</div>
               </>
               :
               <>
-                <div className="catalogue__total-products">Show {newProductsArr.length} products</div>
+                <div className="catalogue__total-products">Show {products.length} products</div>
                 <Select clases="catalogue" />
               </>
             }
@@ -61,8 +61,6 @@ const Catalogue = () => {
           </div>
           <div className={`catalogue__filters filters ${showFilter && "show"}`}>
             <Filters
-              data={products}
-              searchCategory={searchCategory}
               changeState={setShowFilter}
               showFilter={showFilter}
             />
@@ -72,11 +70,11 @@ const Catalogue = () => {
             <Loading />
             :
             <div className="catalogue__products">
-              {newProducts.length > 0
+              {products.length > 0
                 ?
                 <>
                   {
-                    newProductsArr
+                    products
                       .filter((item, index) => index >= 12 * (activePage - 1) && index < 12 * activePage)
                       .map((product, index) => {
                         return (
@@ -95,7 +93,7 @@ const Catalogue = () => {
 
 
       </div>
-      <Article title={searchCategory} text={text} />
+      <Article title={mainCategory} text={text} />
 
     </main>
   )

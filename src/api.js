@@ -25,6 +25,23 @@ export async function getProducts(params) {
 		console.log(error.message)
 	}
 }
+export async function getSingleProduct(id) {
+	try {
+		const res = await client.get(`/products/${id}`)
+		const { data: { product } } = res
+		if (product) {
+			const newProduct = product.map(item => {
+				const { _id, quantity } = item
+				return { ...item, id: _id, total: quantity }
+			})
+			return newProduct
+		} else {
+			return []
+		}
+	} catch (error) {
+		console.log(error.message)
+	}
+}
 export async function getUser(path, obj) {
 	try {
 		const newUser = await client.post(`/auth${path}`, obj)
