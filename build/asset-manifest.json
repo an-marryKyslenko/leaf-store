@@ -1,12 +1,12 @@
 {
   "files": {
-    "main.css": "./static/css/main.7ae66f66.css",
-    "main.js": "./static/js/main.19f3ce2a.js",
-    "static/media/home-about.png": "./static/media/home-about.f31419fea462033d3ce7.png",
-    "static/media/section-fon.png": "./static/media/section-fon.5ae804864c11710e8799.png",
-    "static/media/main-photo.jfif": "./static/media/main-photo.b30c588500759b695434.jfif",
-    "static/media/home-section-fon.jfif": "./static/media/home-section-fon.062f41ff1012e2426a82.jfif",
-    "static/media/main-fon.jfif": "./static/media/main-fon.95d3601b9b050d5450b3.jfif",
+    "main.css": "./static/css/main.281f2427.css",
+    "main.js": "./static/js/main.a3b3d286.js",
+    "static/media/main-photo.jpg": "./static/media/main-photo.397773863aaf3c4ae102.jpg",
+    "static/media/home-about.jpg": "./static/media/home-about.a7a867b30463d0644d28.jpg",
+    "static/media/main-fon.jpg": "./static/media/main-fon.79a41e46836f66789b5f.jpg",
+    "static/media/section-fon.jpg": "./static/media/section-fon.6aacaf671393166a84ae.jpg",
+    "static/media/home-section-fon.jpg": "./static/media/home-section-fon.03e269d0bac88fb331d5.jpg",
     "static/media/item-photo-2.png": "./static/media/item-photo-2.b181d89d5490d2d0f32e.png",
     "static/media/partner-3.png": "./static/media/partner-3.cc92a7a9026ca184afd8.png",
     "static/media/item-photo-3.png": "./static/media/item-photo-3.7daf742a656b849cc3ce.png",
@@ -17,14 +17,15 @@
     "static/media/icon-btn-3.svg": "./static/media/icon-btn-3.164283547326172fa239286fabe296f7.svg",
     "static/media/partner-1.png": "./static/media/partner-1.b3d0c347588af211b0b0.png",
     "static/media/icon-btn-4.svg": "./static/media/icon-btn-4.5ed7bb39269e27510a36ad8629129577.svg",
+    "static/media/icon-btn-1.svg": "./static/media/icon-btn-1.f3f41260bce79ea3a778faa46e6d83d4.svg",
     "static/media/icon-btn-2.svg": "./static/media/icon-btn-2.caf4cfb8df0b45de4779146d107a283d.svg",
     "static/media/icon-btn-5.svg": "./static/media/icon-btn-5.981cff3ad641e46bd985a72c48ce742a.svg",
     "index.html": "./index.html",
-    "main.7ae66f66.css.map": "./static/css/main.7ae66f66.css.map",
-    "main.19f3ce2a.js.map": "./static/js/main.19f3ce2a.js.map"
+    "main.281f2427.css.map": "./static/css/main.281f2427.css.map",
+    "main.a3b3d286.js.map": "./static/js/main.a3b3d286.js.map"
   },
   "entrypoints": [
-    "static/css/main.7ae66f66.css",
-    "static/js/main.19f3ce2a.js"
+    "static/css/main.281f2427.css",
+    "static/js/main.a3b3d286.js"
   ]
 }
