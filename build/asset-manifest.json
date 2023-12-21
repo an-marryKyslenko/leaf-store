@@ -1,31 +1,32 @@
 {
   "files": {
-    "main.css": "./static/css/main.281f2427.css",
-    "main.js": "./static/js/main.c8cb0dac.js",
+    "main.css": "./static/css/main.5aa0f092.css",
+    "main.js": "./static/js/main.4350aaed.js",
     "static/media/main-photo.jpg": "./static/media/main-photo.397773863aaf3c4ae102.jpg",
     "static/media/home-about.jpg": "./static/media/home-about.a7a867b30463d0644d28.jpg",
-    "static/media/main-fon.jpg": "./static/media/main-fon.79a41e46836f66789b5f.jpg",
     "static/media/section-fon.jpg": "./static/media/section-fon.6aacaf671393166a84ae.jpg",
-    "static/media/home-section-fon.jpg": "./static/media/home-section-fon.03e269d0bac88fb331d5.jpg",
+    "static/media/home-about.webp": "./static/media/home-about.69d026291cb4f498fefd.webp",
+    "static/media/main-fon.webp": "./static/media/main-fon.e15cba15ce0198b5f327.webp",
+    "static/media/home-section-fon.webp": "./static/media/home-section-fon.37679950dce9f307a710.webp",
     "static/media/item-photo-2.png": "./static/media/item-photo-2.b181d89d5490d2d0f32e.png",
-    "static/media/partner-3.png": "./static/media/partner-3.cc92a7a9026ca184afd8.png",
     "static/media/item-photo-3.png": "./static/media/item-photo-3.7daf742a656b849cc3ce.png",
-    "static/media/partper-5.png": "./static/media/partper-5.55786ce42bdd663d5992.png",
-    "static/media/partner-2.png": "./static/media/partner-2.a91a62bdb72da133c618.png",
-    "static/media/partper-6.png": "./static/media/partper-6.a91a62bdb72da133c618.png",
-    "static/media/partper-4.png": "./static/media/partper-4.6099d409be1f40fbbf11.png",
     "static/media/icon-btn-3.svg": "./static/media/icon-btn-3.164283547326172fa239286fabe296f7.svg",
-    "static/media/partner-1.png": "./static/media/partner-1.b3d0c347588af211b0b0.png",
     "static/media/icon-btn-4.svg": "./static/media/icon-btn-4.5ed7bb39269e27510a36ad8629129577.svg",
+    "static/media/partner-3.webp": "./static/media/partner-3.392aa5ca10681e31db9c.webp",
     "static/media/icon-btn-1.svg": "./static/media/icon-btn-1.f3f41260bce79ea3a778faa46e6d83d4.svg",
+    "static/media/partner-2.webp": "./static/media/partner-2.33c7b48275409a8b6e4c.webp",
+    "static/media/partper-6.webp": "./static/media/partper-6.33c7b48275409a8b6e4c.webp",
+    "static/media/partper-4.webp": "./static/media/partper-4.9cf5f4f732f7cf89e448.webp",
+    "static/media/partner-1.webp": "./static/media/partner-1.c08b10ac3a5f8a139e6d.webp",
+    "static/media/partper-5.webp": "./static/media/partper-5.6274d22b9fc597660f9b.webp",
     "static/media/icon-btn-2.svg": "./static/media/icon-btn-2.caf4cfb8df0b45de4779146d107a283d.svg",
     "static/media/icon-btn-5.svg": "./static/media/icon-btn-5.981cff3ad641e46bd985a72c48ce742a.svg",
     "index.html": "./index.html",
-    "main.281f2427.css.map": "./static/css/main.281f2427.css.map",
-    "main.c8cb0dac.js.map": "./static/js/main.c8cb0dac.js.map"
+    "main.5aa0f092.css.map": "./static/css/main.5aa0f092.css.map",
+    "main.4350aaed.js.map": "./static/js/main.4350aaed.js.map"
   },
   "entrypoints": [
-    "static/css/main.281f2427.css",
-    "static/js/main.c8cb0dac.js"
+    "static/css/main.5aa0f092.css",
+    "static/js/main.4350aaed.js"
   ]
 }

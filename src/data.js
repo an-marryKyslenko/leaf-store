@@ -1,9 +1,9 @@
-import part1 from './assets/images/partners/partner-1.png'
-import part2 from './assets/images/partners/partner-2.png'
-import part3 from './assets/images/partners/partner-3.png'
-import part4 from './assets/images/partners/partper-4.png'
-import part5 from './assets/images/partners/partper-5.png'
-import part6 from './assets/images/partners/partper-6.png'
+import part1 from './assets/images/partners/partner-1.webp'
+import part2 from './assets/images/partners/partner-2.webp'
+import part3 from './assets/images/partners/partner-3.webp'
+import part4 from './assets/images/partners/partper-4.webp'
+import part5 from './assets/images/partners/partper-5.webp'
+import part6 from './assets/images/partners/partper-6.webp'
 
 
 export const text = [

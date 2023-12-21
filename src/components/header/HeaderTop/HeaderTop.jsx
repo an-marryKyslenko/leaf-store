@@ -26,8 +26,8 @@ const HeaderTop = () => {
 					?
 					<>
 					<h4>{`Hello, ${userName.name}`}</h4>
-					<Link to='personal-cabinet' className='header__enter-link'><BsPersonCircle/></Link>
-					<Link to='.' onClick={removeAuth} className='header__enter-link'><RxEnter/></Link>
+					<Link to='personal-cabinet' aria-label='personalCabinet' className='header__enter-link'><BsPersonCircle/></Link>
+					<Link to='.' onClick={removeAuth} aria-label="exit" className='header__enter-link'><RxEnter/></Link>
 					</>
 			:
 			<>

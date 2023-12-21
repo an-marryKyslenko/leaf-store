@@ -5,7 +5,9 @@ import './Home.css'
 
 import { FaLeaf } from 'react-icons/fa'
 
+import aboutPhoneWebP from '../../assets/images/home-about.webp'
 import aboutPhone from '../../assets/images/home-about.jpg'
+import fullscreenImageWebP from '../../assets/images/main-fon.webp'
 import fullscrennImage from "../../assets/images/main-photo.jpg"
 
 import { text, partners } from '../../data'
@@ -32,17 +34,19 @@ const Home = () => {
             <p className="fullscreen__text">The main field of activity is the distribution of seeds, plant protection products, mineral macro- and microfertilizers</p>
             {windowWidth >= 767 && <a href='#' className="fullscreen__btn orange-btn">About compony</a>}
           </div>
-          <div className="fullscreen__image">
-            <img src={fullscrennImage} alt="" />
-          </div>
+          <picture className="fullscreen__image">
+              <source srcSet={fullscreenImageWebP} type="image/webp" />
+              <img src={fullscrennImage} alt="image with farmer" />
+          </picture>
           {windowWidth < 767 && <a href='#' className="fullscreen__btn orange-btn">About compony</a>}
         </div>
       </section>
       <div className="container">
         <section className="about-home home__section">
-          <div className="about-home__img">
+          <picture className="about-home__img">
+            <source srcSet={aboutPhoneWebP} type="image/webp" />
             <img src={aboutPhone} alt="about" />
-          </div>
+          </picture>
           <div className="about-home__content">
             <Title title="About us" clases="about-home" secondLeaf={false} />
             <p><span>DAMAR AGROTRADE LLC</span> is a young team that appeared on the agricultural market in 2020. We are not afraid of difficulties and challenges. Therefore, even the difficult covid period and the global pandemic did not stand in the way of a successful start.</p>
