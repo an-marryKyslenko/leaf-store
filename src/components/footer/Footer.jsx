@@ -31,7 +31,7 @@ const Footer = () => {
             </ul>
           </div>
           <div className="footer__column">
-            <h4 className="footer__subtitle">Product</h4>
+            <h5 className="footer__subtitle">Product</h5>
             <ul className='footer__submenu'>
               <li className='footer__link'><Link to="catalogue?category=seeds">Catalog of products</Link></li>
               <li className='footer__link'><Link to="catalogue?category=plants%20protecting%20tools">Plants protecting tools</Link></li>
@@ -41,7 +41,7 @@ const Footer = () => {
             </ul>
           </div>
           <div className="footer__column">
-            <h4 className="footer__subtitle">Contacts</h4>
+            <h5 className="footer__subtitle">Contacts</h5>
             <Phones />
             <div className="footer__mail">
               <a href="#" className="roll-btn"><CiMail /></a>
@@ -50,7 +50,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="footer__copy">© 2022 DAT</div>
-        <a href="#header" className='footer__link-to-top'><BsArrowUp/></a>
+        <a href="#header" className='footer__link-to-top' aria-label='linkToTop'><BsArrowUp/></a>
       </div>
     </footer>
   )

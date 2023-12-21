@@ -24,7 +24,7 @@ const SectionSwiper = ({ data, classes, title, totalSlides, buttons, paginationC
 					<Loading />
 					:
 					<>
-						<button className='swiper__prev'><BsArrowLeft /></button>
+						<button className='swiper__prev' aria-label='swipePrev'><BsArrowLeft /></button>
 						<Swiper
 							modules={[Navigation, Pagination, FreeMode]}
 							spaceBetween={10}
@@ -78,7 +78,7 @@ const SectionSwiper = ({ data, classes, title, totalSlides, buttons, paginationC
 								})
 							}
 						</Swiper>
-						<button className='swiper__next' ><BsArrowRight /></button>
+						<button className='swiper__next' aria-label='swipeNext'><BsArrowRight /></button>
 					</>
 				}
 			</div>

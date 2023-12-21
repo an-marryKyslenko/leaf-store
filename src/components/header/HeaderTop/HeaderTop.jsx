@@ -31,8 +31,8 @@ const HeaderTop = () => {
 					</>
 			:
 			<>
-					<Link to='login' className='header__enter-link'><span><BiLogIn /></span>Login</Link>
-					<Link to='register' className='header__enter-link'>Registration</Link>
+					<Link to='login' className='header__enter-link' aria-label='Login'><span><BiLogIn /></span>Login</Link>
+					<Link to='register' className='header__enter-link' aria-label='Registration'>Registration</Link>
 			</>
 				}
 				</div>

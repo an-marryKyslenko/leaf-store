@@ -8,7 +8,7 @@ import { useGlobalContaxt } from '../../../context'
 import './Search.css'
 
 const Search = () => {
-	const { setFilterTypes, products } = useGlobalContaxt()
+	const { products } = useGlobalContaxt()
 	const [searchProducts, setSearchProducts] = useState([])
 	const [openList, setOpenList] = useState(false)
 	const handleSubmit = (e) => {
@@ -24,7 +24,7 @@ const Search = () => {
 	return (
 		<form onSubmit={handleSubmit} className="header__search search">
 			<input name='searchField' type="text" placeholder='Search ...' className='search__input' />
-			<button name='search-bnt' type="submit" className='search__btn'><CiSearch /></button>
+			<button aria-label='searchButton' type="submit" className='search__btn'><CiSearch /></button>
 			{openList
 				?
 				<div className="search__product-items">
